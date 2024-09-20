@@ -1,0 +1,160 @@
+/* ----------------------------- all books / breeds -------------------------*/
+
+#books-top-ctn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1em;
+  h1 {
+    font-size: 2.5em;
+    color:saddlebrown;
+    line-height: 40px;
+  }
+  
+}
+
+#book-lft-row {
+  margin: 0 20px;
+  max-width:500px;
+  min-width: 350px;
+  .text-lft {
+    margin-top: 15px;
+  }
+}
+
+#book-rgt-row {
+  margin: 0 20px;
+  max-width:450px;
+  h2 {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 40px;
+  }
+}
+
+#puppy-book-ctn {
+    display: flex;
+    flex-direction: row;
+}
+  
+#puppy-book-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  font-size: 15px;
+  margin-left: 20px;
+  span {
+    font-weight: 500;;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+#puppies-book-img {
+  max-height: 300px;
+  padding-top: 10px;
+}
+
+#book-selection {
+  margin-top:10px;
+  display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#book-selection-frame {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 1200px;
+    border-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: saddlebrown;
+    border-top-style: solid;
+    border-top-color: saddlebrown;
+    padding: 20px;
+    margin: 10px 20px;
+}
+
+#breed-heading {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 500;
+    width: 300px;
+    text-align: center;
+    align-items: center;
+    margin: 0 20px;
+}
+
+#puppy-img-ctn {
+    max-height: 300px;
+    #puppies-book-img {
+        height: 100%;
+        padding:0;
+    }
+}
+
+.breed-radio-btns {
+  min-width: max-content;
+  text-align: center;
+  align-self: center;
+  :hover {
+    color:saddlebrown;
+    font-weight: 600;
+    transform: scale(1.1);
+  }
+  label {
+    padding: 5px;
+    margin-left:5px;
+    margin-right: 5px;;
+  }
+
+}
+
+/* Labels for checked inputs */
+.br-btn:checked + label{
+  color:saddlebrown;
+  font-weight: bold;
+  font-size: 18px;
+  border: 2px solid saddlebrown;
+  border-radius: 10px;
+}
+
+.br-btn {
+  display:none;
+}
+
+#book-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#book-covers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+    
+  img {
+    max-height: 300px;
+    max-width: 200;
+    margin:20px;
+  }
+
+  .dont-display-breed {
+    display: none;
+  }
+
+}
+
+.book-cover:hover {
+   transform: scale(1.05);
+}

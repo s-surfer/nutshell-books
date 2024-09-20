@@ -1,0 +1,17 @@
+
+/* ------------- PRIVACY PAGE  -----------------------*/
+
+.privacy-content {
+    display: flex;
+    flex-direction: column;
+    max-width:1000px;
+    margin: 0px auto;
+    padding: 20px;
+    h4 {
+      font-size: 24px;
+      font-weight: 500;
+      color: saddlebrown;
+      margin: 0;
+    }
+  }
+  
