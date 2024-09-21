@@ -1,11 +1,12 @@
 // image carousel on main page
 
+let imgWidth = 175;   //widht in pixels
 let nrOfImages = 7;
-let midWay = (nrOfImages + 1) / 2;
 let imgCarousel = document.getElementById("img_carousel1");
 
 function imgCarouselSetup() {
     if (!imgCarousel) return;
+    getNrOfImages();
     let imgCarouselItem = getImgCarouselItems();
     let imgCarouselItemCount = parseInt(imgCarouselItem.length);
    
@@ -31,6 +32,11 @@ function getImgCarouselItems() {
 
 /* adds numbers to the id */
 function imgCarouselNumbering() {
+    /* check to see if resized */
+    window.addEventListener('resize', function() {
+        getNrOfImages();
+    });
+
     let imgCarouselItem = getImgCarouselItems();
     let imgCarouselItemCount = imgCarouselItem.length;
     let lastImageId = "img_carousel_14";
@@ -39,7 +45,7 @@ function imgCarouselNumbering() {
     let imgItem;
     let zIndex = 1;
     let scaleFactor = .06;
-
+    
     for (let r in imgCarouselItem) {
         imgItem = imgCarouselItem[r];
         if (!counter) counter = (imgItem.dataset.img_carousel_id) ? imgItem.dataset.img_carousel_id : 0;
@@ -49,7 +55,7 @@ function imgCarouselNumbering() {
         
 
         // add styling
-        if (cnt >= 1 && cnt <= 7) {
+        if (cnt >= 1 && cnt <= nrOfImages) {
             if (cnt < midWay) {
                 scale = 1 - (scaleFactor * (midWay - cnt + 1));
                 translateX = ((midWay - cnt) * 100);
@@ -83,7 +89,6 @@ function imgCarouselNumbering() {
     }
 }
 
-
 imgCarouselSetup();
 if (imgCarousel) {
     setInterval(
@@ -91,4 +96,14 @@ if (imgCarousel) {
         3000
     );
 }
+
+function getNrOfImages() {
+    let windowWidth = window.innerWidth;
+    nrOfImages = Math.floor((windowWidth / imgWidth)) ;
+    if (nrOfImages % 2 === 0) {nrOfImages--}; // must be odd number
+    if (nrOfImages > 7) {nrOfImages = 7};
+    if (nrOfImages < 1) {nrOfImages = 1};
+    midWay = (nrOfImages +1 ) / 2;
+    // console.log("WW=" + windowWidth+ "<> Nr=" + nrOfImages);
+};
 
