@@ -335,7 +335,7 @@ nav .navbar .links li:hover .js-sub-menu{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    height: 70px;
     .logo-name {
       height: 100%
     }
@@ -402,7 +402,7 @@ nav .navbar .links li:hover .js-sub-menu{
   nav .navbar .links li .arrow{
     line-height: var(--nav-links-line-height);
     position: relative;
-    left:-35px;
+    left:-45px;
   }
 
   nav .navbar .links li{
@@ -520,10 +520,11 @@ nav .navbar .links li:hover .js-sub-menu{
   
 }
 
-@media (max-width:350px){
+@media (max-width:500px){
   
-  #nutshell-logo, .sidebar-logo {
+  #nutshell-logo,.sidebar-logo {
     height: 70px !important;
+    /* width: 140px; */
   }
 
   nav .navbar .nav-links{
@@ -722,6 +723,9 @@ nav .navbar .links li:hover .js-sub-menu{
     }
     > h2 {
       font-size: 20px;
+    }
+    .favcon {
+      height: 20px;
     }
   }
 
