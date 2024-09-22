@@ -73,11 +73,17 @@ p, li, blockquote {
   --submenu-color: saddlebrown; 
   --submenu-font-size: 1.1rem;
   --max-sidebar-width: 300px;
-  --sidebare-ident: 15px;
+  --sidebar-ident: 15px;
+}
+
+.logo {
+  height: 100%;
+  aspect-ratio: 2;
 }
 
 #nutshell-logo {
-    height: 100px;
+    height: 100%;
+    width: 100%;
     margin-right: 0 20px;
 }
 
@@ -177,7 +183,7 @@ nav .navbar .links li .sub-menu{
   display: none;
   z-index: 2;
   a {
-    padding: 0 10px !important;
+    padding: 0 10px;
   }
 }
 
@@ -217,13 +223,9 @@ nav .navbar .links li:hover .js-sub-menu{
 }
 
 @media (max-width:1000px) {
-  nav .navbar{
-    max-width: 100%;
-    padding: 0 25px;
-  }
   
   nav .navbar .links li{
-    padding: 0 5px;
+    padding: 0;
     white-space: nowrap;
   }
   
@@ -247,7 +249,6 @@ nav .navbar .links li:hover .js-sub-menu{
   .links li .sub-menu .more:hover .more-sub-menu{
     display: block;
     top: -15px;
-    /* left: -155px; */
   }
   .more:hover .htmlcss-more-arrow,
   .more:hover .js-arrow {
@@ -255,11 +256,11 @@ nav .navbar .links li:hover .js-sub-menu{
   } 
 
   .nav-links {
-    margin-right: 70px !important;
+    margin-right: 10px !important;
   }
 
   .topnav {
-    padding: 0 5px;
+    padding: 0;
     margin: 0 15px;
   }
   
@@ -296,10 +297,6 @@ nav .navbar .links li:hover .js-sub-menu{
 
 @media (max-width:800px){
   
-  #nutshell-logo {
-    height: 80px;
-  }
-
   nav {
     height: 80px;
   }
@@ -337,6 +334,10 @@ nav .navbar .links li:hover .js-sub-menu{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 80px;
+    .logo-name {
+      height: 100%
+    }
   }
   
   .sidebar-logo  i,
@@ -344,15 +345,16 @@ nav .navbar .links li:hover .js-sub-menu{
     display: flex;
     flex-direction:row;
     align-items: center;
-    /* font-size: 3px; */
     font-weight: 300;
     color: var(--navbar-fa-color);
     padding: 5px;
     border: 0.5px solid saddlebrown;
     border-radius: 5px;
+    margin-left: 10px;
     &:hover {
       cursor: pointer;
     }
+    /* this is the menu after bars */
     div {
       font-family: "roboto", sans-serif;
       font-size: 25px;
@@ -386,16 +388,11 @@ nav .navbar .links li:hover .js-sub-menu{
 
   /* indent sidebar menu */
   .navbar .links li .sub-menu li{
-    padding: 0 var(--sidebare-ident);
+    padding: 0 var(--sidebar-ident);
   }
 
   /* this would be padding for the sidebar menu links */
-  nav .navbar .links li a{
-     padding-left: 10px; 
-     /* padding-right: 15px; */
-     /* margin-right: 20px; */
-  }
-  
+
   nav .navbar .links{
       display: block;
       margin-top: 10px;
@@ -404,7 +401,6 @@ nav .navbar .links li:hover .js-sub-menu{
     line-height: var(--nav-links-line-height);
     position: relative;
     left:-35px;
-    
   }
 
   nav .navbar .links li{
@@ -416,8 +412,12 @@ nav .navbar .links li:hover .js-sub-menu{
     box-shadow: none;
     display: none;
   }
+
   nav .navbar .links li .sub-menu li{
     border-bottom: none;
+    a {
+      padding-right: 0;
+    }
   }
   .navbar .links li .sub-menu .more-sub-menu{
     display: none;
@@ -471,10 +471,7 @@ nav .navbar .links li:hover .js-sub-menu{
       font-family: 'FontAwesome', sans-serif;
       color: saddlebrown;  
       content: '\f015';
-      top: 0;
-      /* left: -20px; */
-      /* right: 20px */
-      margin-right: 15px;
+      margin: 0 15px 0 5px;
       width: 10px;
     }
   }
@@ -485,9 +482,7 @@ nav .navbar .links li:hover .js-sub-menu{
       font-family: 'FontAwesome', sans-serif;
       color: saddlebrown;  
       content: '\f518';
-      top: 0;
-      left: -30px;
-      margin-right: 15px;
+      margin: 0 15px 0 5px;
     }
   }
 
@@ -497,9 +492,7 @@ nav .navbar .links li:hover .js-sub-menu{
       font-family: 'FontAwesome', sans-serif;
       color: saddlebrown;  
       content: '\f05a';
-      top: 0;
-      left: -30px;
-      margin-right: 15px;
+      margin: 0 15px 0 5px;
     }
   }
 
@@ -509,9 +502,7 @@ nav .navbar .links li:hover .js-sub-menu{
       font-family: 'FontAwesome', sans-serif;
       color: saddlebrown;  
       content: '\f003';
-      top: 0;
-      left: -30px;
-      margin-right: 15px;
+      margin: 0 15px 0 5px;
     }
   }
 
@@ -521,9 +512,7 @@ nav .navbar .links li:hover .js-sub-menu{
       font-family: 'FontAwesome', sans-serif;
       color: saddlebrown;  
       content: '\f6d3';
-      top: 0;
-      left: -30px;
-      margin-right: 15px;
+      margin: 0 15px 0 5px;
     }
   }
   
@@ -531,8 +520,8 @@ nav .navbar .links li:hover .js-sub-menu{
 
 @media (max-width:370px){
   
-  #nutshell-logo {
-    height: 70px;
+  #nutshell-logo, .sidebar-logo {
+    height: 70px !important;
   }
 
   nav .navbar .nav-links{
@@ -681,7 +670,7 @@ nav .navbar .links li:hover .js-sub-menu{
 
 .slider_deck {
   position:relative;
-  width: 400px;
+  width: 28vw;
   aspect-ratio: 1.47;;
   border-radius: 10px;
   margin: 10px;
@@ -712,6 +701,9 @@ nav .navbar .links li:hover .js-sub-menu{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .slider_deck {
+    width: 90%;
   }
 }
 
