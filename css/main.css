@@ -735,6 +735,14 @@ nav .navbar .links li:hover .js-sub-menu{
   .slider-deck {
     width: 85vw !important;
     aspect-ratio: 1.47 !important;
+    .slider-card {
+      height: 100%;
+      width: 100%;
+      .slider-img {
+        height: 100%;
+        width: 100%;
+      }
+    }
   }
 }
 

@@ -76,3 +76,11 @@
   transform: translateY(-2px);
 }
  
+@media (max-width: 700px) {
+  #book-top {
+    margin-bottom: 0px;
+  }
+  #book-lft-rw {
+    margin: 0px;
+  }
+  }
