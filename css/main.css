@@ -74,6 +74,7 @@ p, li, blockquote {
   --submenu-font-size: 1.1rem;
   --max-sidebar-width: 300px;
   --sidebar-ident: 15px;
+  --img-ratio: 1.47;
 }
 
 .logo {
@@ -673,8 +674,8 @@ nav .navbar .links li:hover .js-sub-menu{
 
 .slider-deck {
   position:relative;
-  width: 28vw;
-  aspect-ratio: 1.47;;
+  width: 29vw;
+  aspect-ratio: var(--img-ratio);
   border-radius: 10px;
   margin: 10px;
 }
@@ -684,7 +685,7 @@ nav .navbar .links li:hover .js-sub-menu{
   opacity: 0;
   transition: opacity 2s ease-in-out; 
   width: 100%;
-  aspect-ratio: 1.47;
+  aspect-ratio: var(--img-ratio);
 }
 
 .slider-card.active {
@@ -708,7 +709,7 @@ nav .navbar .links li:hover .js-sub-menu{
 
   .slider-deck {
     width: 400px !important;
-    aspect-ratio: 1.47 !important;
+    aspect-ratio: var(--img-ratio) !important;
     margin: 5px 0;
   }
 
@@ -733,8 +734,8 @@ nav .navbar .links li:hover .js-sub-menu{
 
 @media (max-width: 500px) {
   .slider-deck {
-    width: 85vw !important;
-    aspect-ratio: 1.47 !important;
+    width: 82vw !important;
+    aspect-ratio: var(--img-ratio) !important;
     .slider-card {
       height: 100%;
       width: 100%;

@@ -83,4 +83,8 @@
   #book-lft-rw {
     margin: 0px;
   }
+  #book-rgt-rw {
+    margin: 0 20px;
   }
+ 
+}
