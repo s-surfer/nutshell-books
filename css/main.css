@@ -319,7 +319,7 @@ nav .navbar .links li:hover .js-sub-menu{
   nav .navbar .nav-links{
     position: fixed;
     top: 0;
-    left: -200%;
+    left: -100%;
     display: block;
     max-width: var(--max-sidebar-width);
     width: 100%;
@@ -328,7 +328,7 @@ nav .navbar .links li:hover .js-sub-menu{
     padding: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     transition: all 0.5s ease;
-    z-index: 1000;
+    z-index: 100;
   }
 
   .navbar .nav-links .sidebar-logo{
@@ -367,6 +367,7 @@ nav .navbar .links li:hover .js-sub-menu{
   .sidebar-logo  i,
   .navbar .fa-close {
     position: relative;
+    margin-right: 10px;
     &:before {
       font-family: 'FontAwesome', sans-serif;
       color: saddlebrown;  
@@ -703,8 +704,10 @@ nav .navbar .links li:hover .js-sub-menu{
     justify-content: center;
     align-items: center;
   }
-  .slider_deck {
-    width: 90%;
+
+  .slider_img {
+    height: 100%;
+    width: 100%
   }
   #home-lft-row {
     > h1 {
