@@ -319,7 +319,7 @@ nav .navbar .links li:hover .js-sub-menu{
   nav .navbar .nav-links{
     position: fixed;
     top: 0;
-    left: -100%;
+    left: -120%;
     display: block;
     max-width: var(--max-sidebar-width);
     width: 100%;
@@ -355,7 +355,7 @@ nav .navbar .links li:hover .js-sub-menu{
     &:hover {
       cursor: pointer;
     }
-    /* this is the menu after bars */
+    /* this is the menu text after bars */
     div {
       font-family: "roboto", sans-serif;
       font-size: 25px;
@@ -520,7 +520,7 @@ nav .navbar .links li:hover .js-sub-menu{
   
 }
 
-@media (max-width:345px){
+@media (max-width:350px){
   
   #nutshell-logo, .sidebar-logo {
     height: 70px !important;
@@ -580,7 +580,7 @@ nav .navbar .links li:hover .js-sub-menu{
   margin: 0 10px 0 0; 
   padding: 0px 20px;
   max-width: 700px;
-  min-width: 300px;
+  min-width: 270px;
   h1 {
     font-size: 24px;
     margin-bottom: 5px;
@@ -593,7 +593,7 @@ nav .navbar .links li:hover .js-sub-menu{
 
 #home-rgt-row {
   align-content: center;
-  margin: 0 20px 0 10px;
+  margin: 0 20px 0 20px;
   max-width: 360px;
   min-width: 200px;
 }
@@ -656,7 +656,7 @@ nav .navbar .links li:hover .js-sub-menu{
 
 /*======================== sliders at botton of home page and in each book page ============ */
 
-.slider_ctn {
+.slider-ctn {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -670,7 +670,7 @@ nav .navbar .links li:hover .js-sub-menu{
   margin: 10px auto;
 }
 
-.slider_deck {
+.slider-deck {
   position:relative;
   width: 28vw;
   aspect-ratio: 1.47;;
@@ -678,7 +678,7 @@ nav .navbar .links li:hover .js-sub-menu{
   margin: 10px;
 }
 
-.slider_card {
+.slider-card {
   position: absolute;
   opacity: 0;
   transition: opacity 2s ease-in-out; 
@@ -686,11 +686,11 @@ nav .navbar .links li:hover .js-sub-menu{
   aspect-ratio: 1.47;
 }
 
-.slider_card.active {
+.slider-card.active {
   opacity: 1;
 }
 
-.slider_img {
+.slider-img {
   height: 100%;
   border: 2px solid saddlebrown;
   border-radius: 10px;
@@ -705,13 +705,20 @@ nav .navbar .links li:hover .js-sub-menu{
     align-items: center;
   }
 
-  .slider_img {
+  .slider-deck {
+    width: 400px !important;
+    aspect-ratio: 1.47 !important;
+    margin: 5px 0;
+  }
+
+  .slider-img {
     height: 100%;
     width: 100%
   }
+
   #home-lft-row {
     > h1 {
-      font-size: 22px;
+      font-size: 20px;
     }
     > h2 {
       font-size: 20px;
@@ -721,7 +728,7 @@ nav .navbar .links li:hover .js-sub-menu{
 }
 
 @media (max-width: 500px) {
-  .slider_deck {
+  .slider-deck {
     width: 85vw !important;
     aspect-ratio: 1.47 !important;
   }

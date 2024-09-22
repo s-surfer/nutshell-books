@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     /* number of different decks of card */
-    const decks = document.querySelectorAll('.slider_deck');
-    const cards = document.querySelectorAll(".slider_card");
+    const decks = document.querySelectorAll('.slider-deck');
+    const cards = document.querySelectorAll(".slider-card");
     let noOfCardsPerDeck = cards.length / decks.length;
     let currentIndex = 0;
     let firstTimeIndex = 0;
