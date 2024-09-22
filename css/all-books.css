@@ -17,7 +17,7 @@
 #book-lft-row {
   margin: 0 20px;
   max-width:500px;
-  min-width: 350px;
+  min-width: 250px;
   .text-lft {
     margin-top: 15px;
   }
@@ -45,11 +45,12 @@
   justify-content: start;
   font-size: 15px;
   margin-left: 20px;
-  span {
-    font-weight: 500;;
-  }
+  min-width: 250px;
   p {
     margin: 0;
+    span {
+      font-weight: 500;
+    }
   }
 }
 
@@ -157,4 +158,22 @@
 
 .book-cover:hover {
    transform: scale(1.05);
+}
+
+@media (max-width:450px){
+  #book-rgt-row > h2 {
+    text-align: center;
+  }
+  #puppy-book-ctn {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #puppy-img-ctn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
 }

@@ -367,7 +367,7 @@ nav .navbar .links li:hover .js-sub-menu{
   .sidebar-logo  i,
   .navbar .fa-close {
     position: relative;
-    margin-right: 10px;
+    margin-right: 20px;
     &:before {
       font-family: 'FontAwesome', sans-serif;
       color: saddlebrown;  
