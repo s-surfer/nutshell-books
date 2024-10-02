@@ -37,7 +37,7 @@ function openModal() {
     }, 100);
     
     // Fetch external HTML content and inject it into the modal
-    fetch('../pages/contact-us-modal.html') // Load external HTML
+    fetch('./contact-us-modal.html') // Load external HTML
         .then(response => response.text())
         .then(data => {
             htmlContentDiv.innerHTML = data;

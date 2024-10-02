@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Nutshell Books</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/nutshell-favicon.ico"/>
+
+    
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/contact.css">
+     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        
+</head>
+
+<body>
+
+    <nav>
+        <div class="navbar">
+          <i class='fa fa-bars'> <div>Menu</div></i>
+          <div class="logo"><a href="../"><img id="nutshell-logo" src="../assets/images/nutshell-logo-2.png" alt="Nutshell Logo"></a></div>
+          <div class="nav-links">
+            <div class="sidebar-logo">
+              <span class="logo-name"><img id="nutshell-logo" src="../assets/images/nutshell-logo-2.png" alt="Nutshell Logo"></span>
+              <i class='fa fa-close' ></i>
+            </div>
+            <ul class="links">
+                <li class="topnav"><a class="fa-house" href="../">Home</a></li>
+                <li class="topnav"><a class="fa-books" href="./all-books.html">Books</a></li>
+                <li  class="topnav">
+                <a class="submenu-link fa-breeds" href="#">Breeds</a>
+                <i class='fa fa-chevron-right htmlcss-arrow arrow' style="font-size:14px"></i>
+                <ul class="htmlCss-sub-menu sub-menu">
+                    <li><a href="./your-puppy.html">All Puppies</a></li>
+                    <li><a href="./beagle.html">Beagle</a></li>
+                    <li><a href="./cavalier-king.html">King Charles Spaniel</a></li>
+                    <li><a href="./cavapoo.html">Cavapoo</a></li>
+                    <li><a href="./chihuahua.html">Chihuahua</a></li>
+                    <li><a href="./cockapoo.html">Cockapoo</a></li>
+                    <li><a href="./cocker-spaniel.html">Cocker Spaniel</a></li>
+                    <li><a href="./dachshund.html">Dachshund</a></li>
+                    <li><a href="./german-shepherd.html">German Shepherd</a></li>
+                    <li><a href="./golden-retriever.html">Golden Retriever</a></li>
+                    <li><a href="./jack-russell.html">Jack Russell</a></li>
+                    <li><a href="./labrador.html">Labrador Retriever</a></li>
+                    <li><a href="./staffie.html">Staffie (Staffordshire Bull)</a></li>
+                    <li><a href="./yorkie.html">Yorkie (Yorkshire Terrier)</a></li>
+                </ul>
+              </li>
+              <li class="topnav"><a class="fa-about" href="./about.html">About</a></li>
+              <li class="topnav"  id="active-link"><a class="fa-contact" href="./contact-us.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <!-- Main Div-->
+    
+    <main>
+        
+        <!-- Wrapper container -->
+        <div id="contact-wrapper">
+            <div class="contact-ctn">
+
+                <!-- Bootstrap 5 starter form -->
+                <h1>Nutshell Books</h1>
+                <h2>Please get in touch!</h2>
+                <p>Thanks for visiting Nutshell Books.</p>
+                <p>If you'd like to make contact, we'd love to hear from you!</p>
+                
+                <section class="contact-section">
+                    
+                    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                  
+                        <!-- to my email address -->
+                      <!-- <input type="hidden" name="access_key" value="0a3adf03-7911-45c3-99f4-5faf5f0034a5" /> -->
+                       <!-- to infro@nutshell-books.com -->
+                      <input type="hidden" name="access_key" value="5f906900-595d-4ac5-8e23-f5c165019773" />
+                      <input type="hidden" name="subject" value="New Contact Form Submission" />
+                      <input type="hidden" name="from_name" value="Nutshell Books " />
+
+                      <!-- redirect !!!!!!!!!!!!!!!!!!!!!! -->
+                      <input type="hidden" name="redirect" value="https://s-surfer.github.io/nutshellbooks/public/thankyou.html">
+
+                      <!-- More custom ization options available in the docs: https://docs.web3forms.com -->
+                  
+                      <div class="form-group-container">
+                        <div class="form-group">
+                            <label for="name" class="form-label">
+                                <input id="name" name="name" class="form-input form-inputs" placeholder=" " required type="text" autocomplete="on"/>
+                                <span class="placeholder_text">Name <span class="input-required">*</span></span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">
+                                <input id="email" name="email" class="form-input form-inputs" placeholder=" " required type="email" autocomplete="on" />
+                                <span class="placeholder_text">Email <span class="input-required">*</span></span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">
+                                <input id="phone" name="phone" class="form-input form-inputs" placeholder=" " type="text" autocomplete="on"/>
+                                <span class="placeholder_text">Phone i.e. (+44) 7896 123 456</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                          <label for="message" class="form-label">
+                            <textarea class="form-textarea form-inputs" id="message" name="message" placeholder=" " required ></textarea>
+                            <span class="placeholder_text">Your Message <span class="input-required">*</span></span>
+                        </label>
+                        </div>
+                      </div>
+                      <button class="form-submit" type="submit">Send Message</button>
+                    </form>
+                  
+                  </section>
+                
+            
+            </div>
+        </div>
+    
+    </main>
+  
+
+    <!-- footer -->
+    <footer>
+        <footer-section>
+            
+            <div id="footer-left" class="footer-ctn">
+                <div>
+                    <h6>Contact</h6>
+                    <address>
+                        <span>Nutshell Books Ltd.</span>
+                        <span>Publisher</span>
+                        <span>+44 (0) 7908 768 413</span>
+                        <span><a href="mailto:info@nutshell-books.com">info@nutshell-books.com</a></span>
+                    </address>
+                </div>
+            </div>
+            <div id="footer-center" class="footer-ctn">
+                <div>
+                    <h6>Current Best Sellers</h6>
+                    <p>Copies of all Nutshell Books are held by the British Library and other UK legal deposit libraries</p>
+                    <ol class="bestsellers">
+                        <li><a href="./cocker-spaniel.html">Cocker Spaniel</a></li>
+                        <li><a href="./jack-russell.html">Jack Russell</a></li>
+                        <li><a href="./dachshund.html">Dachshund</a></li>
+                    </ol>
+                </div>
+            </div>
+            <div id="footer-right" class="footer-ctn">
+                <div>
+                    <h6>MISCELLANEOUS</h6>
+                    <ul class="miscellaneous">
+                        <li><a href="./privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </footer-section>
+
+        <div class="copyright">
+            <span>
+                © 2024 Nutshell Books
+            </span>
+        </div>
+
+    </footer>   
+    
+    <script type="text/javascript" src="../js/nav.js"></script>   
+   
+</body>
+</html>

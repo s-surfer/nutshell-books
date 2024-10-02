@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocker Spaniel | Nutshell Books</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/nutshell-favicon.ico"/>
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/books.css">
+     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        
+</head>
+
+<body>
+
+    <nav>
+        <div class="navbar">
+          <i class='fa fa-bars'> <div>Menu</div></i>
+          <div class="logo"><a href="../"><img id="nutshell-logo" src="../assets/images/nutshell-logo-2.png" alt="Nutshell Logo"></a></div>
+          <div class="nav-links">
+            <div class="sidebar-logo">
+              <span class="logo-name"><img id="nutshell-logo" src="../assets/images/nutshell-logo-2.png" alt="Nutshell Logo"></span>
+              <i class='fa fa-close' ></i>
+            </div>
+            <ul class="links">
+                <li class="topnav"><a class="fa-house" href="../">Home</a></li>
+                <li class="topnav"><a class="fa-books" href="./all-books.html">Books</a></li>
+                <li  class="topnav" id="active-link">
+                <a class="submenu-link fa-breeds" href="#">Breeds</a>
+                <i class='fa fa-chevron-right htmlcss-arrow arrow' style="font-size:14px"></i>
+                <ul class="htmlCss-sub-menu sub-menu">
+                    <li><a href="./your-puppy.html">All Puppies</a></li>
+                    <li><a href="./beagle.html">Beagle</a></li>
+                    <li><a href="./cavalier-king.html">Cavalier King Charles</a></li>
+                    <li><a href="./cavapoo.html">Cavapoo</a></li>
+                    <li><a href="./chihuahua.html">Chihuahua</a></li>
+                    <li><a href="./cockapoo.html">Cockapoo</a></li>
+                    <li><a href="./cocker-spaniel.html">Cocker Spaniel</a></li>
+                    <li><a href="./dachshund.html">Dachshund</a></li>
+                    <li><a href="./german-shepherd.html">German Shepherd</a></li>
+                    <li><a href="./golden-retriever.html">Golden Retriever</a></li>
+                    <li><a href="./jack-russell.html">Jack Russell</a></li>
+                    <li><a href="./labrador.html">Labrador Retriever</a></li>
+                    <li><a href="./staffie.html">Staffie (Staffordshire Bull)</a></li>
+                    <li><a href="./yorkie.html">Yorkie (Yorkshire Terrier)</a></li>
+                </ul>
+              </li>
+              <li class="topnav"><a class="fa-about" href="./about.html">About</a></li>
+              <li class="topnav"><a class="fa-contact" href="#" id="openModalLink">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <!-- Modal contact form -->
+    <div id="myModal" class="modal">
+        <div class="modal-content" id="modalContent">
+            <span class="close" id="closeModal">&times;</span>
+            <div id="htmlContent"></div>
+        </div>
+    </div>
+    
+    <!-- top container with text -->
+    <div id="book-top">
+        <div id="book-lft-rw">
+            <div>
+                <img src="../assets/images/book-covers/Cocker-Cov-Web-RGB-194x300.jpg" alt="Image of Cocker Spaniel book cover">
+            </div>
+            <a id="book-buy-btn" href="https://www.amazon.co.uk/Cocker-Spaniel-Puppy-Nutshell-follow/dp/1916189792" target="_blank">BUY</a>
+        </div>
+        <div id="book-ctr-rw">
+            <h1>you and your COCKER SPANIEL PUPPY <br/> <span class="nutshell-txt">in a nutshell</span></h1>
+            <p>Cocker Spaniels are full of the joys of living. With their ever-wagging tails, they’re like a big dose of sunshine. And their engaging eyes, soft dangly ears and silky-smooth fur make them near impossible to resist.</p>
+            <p>Friendly, eager to please, and a manageable size, these dogs make excellent family pets.</p>
+            <p>They’re intelligent, with a delightful hint of madness, and can be highly energetic. The working Cockers especially love a good run around outdoors, investigating the surroundings with their excellent noses.</p>
+            <p class="fst-italic">Note:</p>
+            <p class="fst-italic">Cockers need company, so don’t choose one if you’re going to be out often and for long stretches.</p>
+        </div>
+        <div id="book-rgt-rw">
+            <div class="testimonial">
+                <blockquote>… a great choice. It’s been fantastic for my puppy’s wellbeing and education</blockquote>
+            </div>
+            <div class="testimonial">
+                <blockquote>100% recommend</blockquote>
+            </div>
+            <div class="testimonial">
+                <blockquote>If you get a cocker spaniel … get this book! Easy to read, very informative and also lots of fun</blockquote>
+            </div> 
+        </div>
+    </div>
+    
+     <!-- bottom container with sliders -->
+     <sliders>
+        <div class="sliders">
+            <div class="slider-deck">
+                <div class="slider-card">
+                    <img class="slider-img" loading="lazy" src="../assets/images/cocker-spaniel/Cocker1-web.jpg" class="card-img" alt="Image of Cocker Spaniel puppies">
+                </div>
+                <div class="slider-card">
+                    <img class="slider-img" loading="lazy" src="../assets/images/cocker-spaniel/Cocker4-web.jpg" class="card-img" alt="Image of Cocker Spaniel puppies">
+                </div>
+            </div>
+            <div class="slider-deck">
+                <div class="slider-card">
+                    <img class="slider-img" loading="lazy" src="../assets/images/cocker-spaniel/Cocker2-web.jpg" class="card-img" alt="Image of Cocker Spaniel puppies">
+                </div>
+                <div class="slider-card">
+                    <img class="slider-img" loading="lazy" src="../assets/images/cocker-spaniel/Cocker5-web.jpg" class="card-img" alt="Image of Cocker Spaniel puppies">
+                </div>
+            </div>
+            <div class="slider-deck">
+                <div class="slider-card">
+                    <img class="slider-img" loading="lazy" src="../assets/images/cocker-spaniel/Cocker3-web.jpg" class="card-img" alt="Image of Cocker Spaniel puppies">
+                </div>
+                <div class="slider-card">
+                    <img class="slider-img" loading="lazy" src="../assets/images/cocker-spaniel/Cocker6-web.jpg" class="card-img" alt="Image of Cocker Spaniel puppies">
+                </div>
+            </div>
+        </div>
+    </sliders>  
+     
+    <!-- footer -->
+    <footer>
+        <footer-section>
+            
+            <div id="footer-left" class="footer-ctn">
+                <div>
+                    <h6>Contact</h6>
+                    <address>
+                        <span>Nutshell Books Ltd.</span>
+                        <span>Publisher</span>
+                        <span>+44 (0) 7908 768 413</span>
+                        <span><a href="mailto:info@nutshell-books.com">info@nutshell-books.com</a></span>
+                    </address>
+                </div>
+            </div>
+            <div id="footer-center" class="footer-ctn">
+                <div>
+                    <h6>Current Best Sellers</h6>
+                    <p>Copies of all Nutshell Books are held by the British Library and other UK legal deposit libraries</p>
+                    <ol class="bestsellers">
+                        <li><a href="./cocker-spaniel.html">Cocker Spaniel</a></li>
+                        <li><a href="./jack-russell.html">Jack Russell</a></li>
+                        <li><a href="./dachshund.html">Dachshund</a></li>
+                    </ol>
+                </div>
+            </div>
+            <div id="footer-right" class="footer-ctn">
+                <div>
+                    <h6>MISCELLANEOUS</h6>
+                    <ul class="miscellaneous">
+                        <li><a href="./privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </footer-section>
+
+        <div class="copyright">
+            <span>
+                © <span id="year-span">xxxx</span> Nutshell Books
+            </span>
+        </div>
+
+    </footer>   
+    
+    <script type="text/javascript" src="../js/slider.js"></script>   
+    <script type="text/javascript" src="../js/nav.js"></script>   
+
+</body>
+</html>
