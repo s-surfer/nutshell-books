@@ -1,69 +1,56 @@
 
 /* ----------------------------  CONTACT PAGE ---------------------- */
-* {
-line-height: 1;
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+:root {
+  --background-color: #fffde7;
 }
 
-#contact-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 30px;
-  }
-  
-  .contact-ctn {
+* {
+line-height: 1;
+font-family: 'Roboto', sans-serif;
+}
+
+.contact-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:#facc30;
-    border-radius: 2%;
-    border-color: saddlebrown;
-    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 6px 0 rgba(0, 0, 0, .5);
-    border-style: solid;
-    border-width: 1px;
-    margin: 0px 20px;
-    padding: 30px;
-    
-    
+    margin: 0 auto;
+    background-color: var(--background-color);
     h1 {
       text-align: center;
       margin-bottom: 10px;
       text-transform: uppercase;
-      font-size: 44px;
-      /* margin: 0; */
-    }
-  
-    h2 {
       font-size: 28px;
+      color: saddlebrown;
+    }
+    h2 {
+      font-size: 18px;
       font-weight: 500;
       margin: 10px;
+      color: saddlebrown;
+      text-align: center;
     }
-  
     p {
       text-align: center;
       font-size: 18px;
-      margin: 10px;
+      margin: 10px 10px 20px 10px;
     }
-    
   }
   
   /*  web3form   */
   
-  .contact-section {
-    width: 90%;
-    max-width: 40rem;
-    margin: 20px auto;
-    padding: 1.5rem 1rem;
-    background-color: #fde98f;
-    border-radius: 2%;
-    border-color: saddlebrown;
-    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 6px 0 rgba(0, 0, 0, .5);
-    border-style: solid;
-    border-width: 1px;
+  .contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .form-group-container{
+      margin: 10px;
+    }
   }
-  
+
   .contact-intro > * + * {
     margin-top: 1rem;
   }
@@ -78,11 +65,6 @@ line-height: 1;
     color: rgb(107 114 128);
   }
   
-  .form-group-container {
-    display: grid;
-    gap: 1rem;
-  }
-  
   .form-group {
     display: flex;
     flex-direction: column;
@@ -92,7 +74,6 @@ line-height: 1;
   .form-label {
     margin-bottom: 0.25rem;
     font-weight: 500;
-    /* new */
     position: relative;
     display: block;
     margin-bottom: 5px;
@@ -100,19 +81,24 @@ line-height: 1;
   }
   
   .form-inputs {
-    padding: 0.5rem;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 0.75rem;
     border: 1px solid saddlebrown;
     display: flex;
-    height: 2.5rem;
     width: 100%;
     border-radius: 0.375rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
     line-height: 1.25rem;
-    background-color: #fde98f;
+    background-color: var(--background-color);
+    box-sizing: border-box;
+    height: 3rem;
   }
   
   .form-textarea {
-    min-height: 120px;
+     /* min-height: 120px;  */
+    height: auto;
+    /* padding-top: 20px; */
   }
   
   /* new form design  below */
@@ -121,20 +107,10 @@ line-height: 1;
     pointer-events: none;
     position: absolute;
     left:5px;
-    top:0px;
+    top:10px;
     transition: 0.4s;
-    opacity: 0.5;
+    opacity: 0.75;
     font-size:14px;
-  }
-  
-  .form-inputs {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid saddlebrown;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    height: 3rem;
   }
   
   /* When input is focused, or the placeholder is not being displayed, change the border to blue */
@@ -148,10 +124,10 @@ line-height: 1;
     color: saddlebrown;
     font-size: 14px;
     font-weight: 400;
-    transform: translateY(-15px) translateX(4px);
+    transform: translateY(-23px) translateX(4px);
     text-align: left;
     line-height:6px;
-    background-color: #fde98f;
+    background-color: var(--background-color);
     opacity:1;
   }
   
@@ -160,21 +136,20 @@ line-height: 1;
   input:-webkit-autofill:hover,
   input:-webkit-autofill:focus,
   input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px #fde98f inset !important;
+    -webkit-box-shadow: 0 0 0 30px var(--background-color) inset !important;
   }
   
   /*  new for design above */
   
   .form-submit {
-    width: 100%;
-    margin-top: 0.5rem;
-    background-color: #f9b94b;
+    margin: 10px;
+    background-color: #ffeaa7;
     color: saddlebrown;
     font-weight: 600;
-    padding: 13px 5px;
+    padding: 15px;
     border: 1px solid saddlebrown;
-    border-radius: 0.375rem;
-    font-size: 16px;;
+    border-radius: 25px;
+    font-size: 16px;
     &:hover {
       background-color: saddlebrown;
       color:white;
@@ -185,41 +160,28 @@ line-height: 1;
     color: red;
   }
   
-  /* email success page */
-  
-  .mail-success {
-    text-align: center;
-  /* background: #fff; */
-  border-top: 1px solid saddlebrown;
-  }
-  .mail-seccess .success-inner {
-  display: inline-block;
-  }
-  .mail-success .success-inner h1 {
-  font-size: 120px;
-  text-shadow: 3px 5px 2px #3333;
-  /* color: #006DFE; */
-  color: saddlebrown;
-  font-weight: 700;
-  }
-  .mail-success .success-inner h1 span {
-  display: block;
-  font-size: 40px;
-  color: #333;
-  font-weight: 600;
-  text-shadow: none;
-  margin-top: 20px;
-  }
-  
-  .mail-success p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-  }
-  
-  .mail-success .success-inner p {
-  padding: 20px 15px;
-  }
-  .mail-success .success-inner .btn{
-  color:#fff;
-  }
+  @keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.blinking-result {
+    margin-top: 10px;
+    font-size: 18px;
+    color: saddlebrown;
+    font-weight: 600;
+    animation: blink 1s infinite; 
+}
+
+.fa-envelope-open-text {
+  font-size: 84px;
+  color: #4cd137;
+}
   

@@ -69,12 +69,13 @@ p, li, blockquote {
   --navbar-color: saddlebrown; 
   --navbar-search-color: saddlebrown; 
   --navbar-fa-color: saddlebrown; 
-  --submenu-background:  #fbe7a1; /*#f5f5f5; */
+  --submenu-background:  #fff9c4; /*#fbe7a1; /*#f5f5f5; */
   --submenu-color: saddlebrown; 
   --submenu-font-size: 1.1rem;
   --max-sidebar-width: 300px;
   --sidebar-ident: 15px;
   --img-ratio: 1.47;
+  --modal-background-color: #fffde7;
 }
 
 .logo {
@@ -568,6 +569,63 @@ nav .navbar .links li:hover .js-sub-menu{
 .img_carousel a img {
   width: 100%;
 }
+
+/*********************** modal section for contact *******************/
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0,0,0,0.6); /* Black background with opacity */
+}
+
+.modal-content.active {
+  max-height: 600px;
+  * {
+      opacity: 1;
+  }
+}
+
+.modal-content {
+  position: relative;
+  margin: 200px auto;
+  padding: 20px;
+  background: var(--modal-background-color);
+  max-width: 30%; /* Limits the width to 40% of the screen */
+  min-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid saddlebrown;
+  border-radius: 2%;
+  transition: width 0.1s ease;
+  text-align: center;
+  /* transition in */
+  max-height: 0;
+  transition: max-height 0.5s ease;
+  * {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      z-index: 1000;
+  } 
+
+}
+.close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 0 7px;
+  font-size: 36px;
+  color: saddlebrown;
+  border: 1px solid saddlebrown;
+  background-color: #ffeaa7;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
 
 /* ------------- homepage mid section -----------------------*/
 

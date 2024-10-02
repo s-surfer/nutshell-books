@@ -39,7 +39,7 @@
                 <ul class="htmlCss-sub-menu sub-menu">
                     <li><a href="./your-puppy.html">All Puppies</a></li>
                     <li><a href="./beagle.html">Beagle</a></li>
-                    <li><a href="./cavalier-king.html">King Charles Spaniel</a></li>
+                    <li><a href="./cavalier-king.html">Cavalier King Charles</a></li>
                     <li><a href="./cavapoo.html">Cavapoo</a></li>
                     <li><a href="./chihuahua.html">Chihuahua</a></li>
                     <li><a href="./cockapoo.html">Cockapoo</a></li>
@@ -54,11 +54,19 @@
                 </ul>
               </li>
               <li class="topnav"><a class="fa-about" href="./about.html">About</a></li>
-              <li class="topnav"><a class="fa-contact" href="./contact-us.html">Contact</a></li>
+              <li class="topnav"><a class="fa-contact" href="#" id="openModalLink">Contact</a></li>
             </ul>
           </div>
         </div>
     </nav>
+
+    <!-- Modal contact form -->
+    <div id="myModal" class="modal">
+        <div class="modal-content" id="modalContent">
+            <span class="close" id="closeModal">&times;</span>
+            <div id="htmlContent"></div>
+        </div>
+    </div>
     
     <!-- top container with text -->
     <div id="book-top">
@@ -158,7 +166,7 @@
 
         <div class="copyright">
             <span>
-                © 2024 Nutshell Books
+                © <span id="year-span">xxxx</span> Nutshell Books
             </span>
         </div>
 
