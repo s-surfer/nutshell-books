@@ -82,51 +82,50 @@ document.addEventListener('keydown', function(event) {
 // catching the submit from the modal window without using submit
 function modalSubmit(e) {
     e.preventDefault();
-    // const form = document.getElementById("form");
-    // const result = document.getElementById("result");
-    // const formData = new FormData(form);
-    // var object = {};
-    // formData.forEach((value, key) => {
-    //   object[key] = value;
-    // });
-    // var json = JSON.stringify(object);
-    // result.innerHTML = "Please wait...";
+    const form = document.getElementById("form");
+    const result = document.getElementById("result");
+    const formData = new FormData(form);
+    var object = {};
+    formData.forEach((value, key) => {
+      object[key] = value;
+    });
+    var json = JSON.stringify(object);
+    result.innerHTML = "Please wait...";
   
-    // fetch("https://api.web3forms.com/submit", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     "Accept": "application/json"
-    //   },
-    //   body: json
-    // })
-    //   .then(async (response) => {
-    //     let json = await response.json();
-    //     if (response.status == 200) {
-    //       result.innerHTML = json.message;
-    //     } else {
-    //       console.log(response);
-    //       result.innerHTML = json.message;
-    //     }
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //     result.innerHTML = "Something went wrong!";
-    //   })
-    //   .then(function () {
-    //     form.reset();
-    //     setTimeout(() => {
-    //       result.style.display = "none";
-    //     }, 5000);
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: json
+    })
+      .then(async (response) => {
+        let json = await response.json();
+        if (response.status == 200) {
+          result.innerHTML = json.message;
+        } else {
+          console.log(response);
+          result.innerHTML = json.message;
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        result.innerHTML = "Something went wrong!";
+      })
+      .then(function () {
+        form.reset();
+        setTimeout(() => {
+          result.style.display = "none";
+        }, 5000);
         // close the modal window
         closeModal();
   
         // Open the modal
         openThankYouModal();
   
-      // });
-  
-   };
+      });
+  };
   
    // Function to create and open a modal dynamically
   function openThankYouModal() {
