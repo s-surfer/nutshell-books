@@ -596,7 +596,7 @@ nav .navbar .links li:hover .js-sub-menu{
   padding: 20px;
   background: var(--modal-background-color);
   max-width: 30%; /* Limits the width to 40% of the screen */
-  min-width: 300px;
+  min-width: 250px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border: 1px solid saddlebrown;
   border-radius: 2%;
@@ -614,8 +614,8 @@ nav .navbar .links li:hover .js-sub-menu{
 }
 .close {
   position: absolute;
-  top: -10px;
-  right: -10px;
+  top: -5px;
+  right: -5px;
   padding: 0 7px;
   font-size: 36px;
   color: saddlebrown;
@@ -625,7 +625,12 @@ nav .navbar .links li:hover .js-sub-menu{
   cursor: pointer;
 }
 
-
+@media (max-width: 500px) {
+  .modal-content {
+    margin-top: 50px;
+    padding: 10px;
+  }
+}
 
 /* ------------- homepage mid section -----------------------*/
 
