@@ -627,7 +627,7 @@ nav .navbar .links li:hover .js-sub-menu{
 
 @media (max-width: 500px) {
   .modal-content {
-    margin-top: 50px;
+    margin-top: 20px;
     padding: 10px;
   }
 }
