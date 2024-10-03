@@ -737,7 +737,7 @@ nav .navbar .links li:hover .js-sub-menu{
 
 .slider-deck {
   position:relative;
-  width: 29vw;
+  width: 400px;
   aspect-ratio: var(--img-ratio);
   border-radius: 10px;
   margin: 10px;
