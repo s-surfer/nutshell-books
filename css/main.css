@@ -604,10 +604,10 @@ nav .navbar .links li:hover .js-sub-menu{
   text-align: center;
   /* transition in */
   max-height: 0;
-  transition: max-height 0.5s ease;
+  transition: max-height 0.25s ease;
   * {
       opacity: 0;
-      transition: opacity 0.5s ease;
+      transition: opacity 0.7s ease;
       z-index: 1000;
   } 
 
@@ -757,7 +757,7 @@ nav .navbar .links li:hover .js-sub-menu{
 
 .slider-img {
   height: 100%;
-  border: 2px solid saddlebrown;
+  border: 0.5px solid #f5f5f5;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 } 
@@ -822,7 +822,7 @@ footer-section {
     background-color: #444;
     font-size: 12.8px;
     color: #ddd;
-    h6 {
+    h3, h2 {
         font-size: 14px;
         text-transform: uppercase;
         font-weight: normal;
