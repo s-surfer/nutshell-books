@@ -25,9 +25,8 @@ htmlcssArrow.onclick = function() {
 
 //////////////////// modal contact window code //////////////////
 
-function openModal() {
+function openModal(modalform, breed) {
     
-    // console.log("here");
     const modal = document.getElementById('myModal');
     const modalContent = document.getElementById('modalContent');
     const htmlContentDiv = document.getElementById('htmlContent');
@@ -37,12 +36,33 @@ function openModal() {
     }, 100);
     
     // Fetch external HTML content and inject it into the modal
-    fetch('./contact-us-modal.html') // Load external HTML
+    fetch('./'+modalform+'-modal.html') // Load external HTML
         .then(response => response.text())
         .then(data => {
             htmlContentDiv.innerHTML = data;
             modal.style.display = 'block';
+           
+            const imgElements = document.querySelectorAll('.breed-images');
+            // Loop through each image element and replace "breed" with the new value
+            imgElements.forEach(imgElement => {
+                imgElement.src = imgElement.src.replace("breed", breed);
+            });
+            console.log(">"+breed+"<");
+            // change top and height for look inside
+            const modalDiv = document.getElementById("modalContent");
+            if (breed !== "") {
+              modalDiv.style.setProperty("margin","50px auto");
+              modalDiv.style.setProperty("padding","10px auto");
+              
 
+              if (window.matchMedia("(max-width: 600px)").matches) {
+                modalDiv.style.setProperty("max-width","90%");
+              } else if (window.matchMedia("(max-width: 1000px)").matches) {
+                modalDiv.style.setProperty("max-width","60%");
+              } else {
+                modalDiv.style.setProperty("max-width","35%");
+              };
+            } 
             // Adjust modal width based on content width
             setTimeout(() => {
                 let contentWidth = htmlContentDiv.scrollWidth;
@@ -54,11 +74,18 @@ function openModal() {
 // Function to close the modal
 function closeModal() {
     document.getElementById('myModal').style.display = 'none';
+    const modalContent = document.querySelector('.modal-content');
+    modalContent.removeAttribute('style'); // Reset inline styles
     modalContent.classList.remove('active');
 }
 
 // Event listeners for opening and closing the modal
-document.getElementById('openModalLink').addEventListener('click', openModal);
+document.getElementById('openModalLink').addEventListener('click', () => {openModal("contact-us", "");});
+// this one is for look inside where breed is passed as an attribute
+document.getElementById('openLookInside').addEventListener('click', (e) => {
+  openModal("look-inside", e.target.getAttribute("breed"));
+});
+
 document.getElementById('closeModal').addEventListener('click', closeModal);
 
 // Close modal when clicking outside the modal content

@@ -584,7 +584,7 @@ nav .navbar .links li:hover .js-sub-menu{
 }
 
 .modal-content.active {
-  max-height: 600px;
+  max-height: 75%;
   * {
       opacity: 1;
   }
@@ -592,10 +592,10 @@ nav .navbar .links li:hover .js-sub-menu{
 
 .modal-content {
   position: relative;
-  margin: 200px auto;
+  margin: 200px auto; /* overridden for look inside within nav.js */
   padding: 20px;
   background: var(--modal-background-color);
-  max-width: 30%; /* Limits the width to 40% of the screen */
+  max-width: 30%; /* Limits the width to 30% of the screen */
   min-width: 250px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border: 1px solid saddlebrown;
@@ -610,7 +610,6 @@ nav .navbar .links li:hover .js-sub-menu{
       transition: opacity 0.7s ease;
       z-index: 1000;
   } 
-
 }
 .close {
   position: absolute;
@@ -625,10 +624,81 @@ nav .navbar .links li:hover .js-sub-menu{
   cursor: pointer;
 }
 
+/* Image list container for scroll - looked inside featurr*/
+#openLookInside {
+  background-color: saddlebrown; 
+  color: wheat; 
+  /* border: 1px solid saddlebrown;  */
+  border-radius: 5px; 
+  padding: 2px 20px; 
+  width: 100%;
+  font-size: 14px; 
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer; 
+  margin-bottom: 5px;
+  box-shadow: 0 4px 15px rgba(255, 87, 34, 0.5); 
+  transition: transform 0.2s, box-shadow 0.2s; 
+}
+
+#openLookInside:hover {
+  background-color: green; 
+  transform: scale(1.05); 
+  box-shadow: 0 6px 20px rgba(255, 87, 34, 0.7); 
+}
+
+#openLookInside:active {
+  transform: scale(0.95); 
+}
+
+.image-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between images */
+}
+
+.image-list img {
+  width: 100%;
+  /* max-width: 500px; */
+  /* height: auto; */
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#scroll-section {
+  margin-top: 20px;
+  height: 825px;
+  overflow-y: scroll;
+}
+
+/* Scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: brown; /* Color of the scrollbar handle */
+  border-radius: 10px; /* Rounded edges */
+  border: 2px solid transparent; /* Padding around the thumb (creates distance) */
+  background-clip: padding-box; /* Ensures the background doesn't overflow the border */
+}
+
+@media (max-width: 1000px) {
+  .modal-content {
+    max-width: 60%;
+  }
+}
+
+
 @media (max-width: 500px) {
   .modal-content {
     margin-top: 20px;
     padding: 10px;
+    max-width: 80%;
   }
 }
 
