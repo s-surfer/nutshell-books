@@ -672,20 +672,21 @@ nav .navbar .links li:hover .js-sub-menu{
 }
 
 /* Scrollbar for Webkit browsers (Chrome, Safari, Edge) */
-::-webkit-scrollbar {
+#scroll-section::-webkit-scrollbar {
   width: 10px; /* Width of the scrollbar */
 }
 
-::-webkit-scrollbar-track {
+#scroll-section::-webkit-scrollbar-track {
   background: transparent; /* Background of the scrollbar track */
 }
 
-::-webkit-scrollbar-thumb {
+#scroll-section::-webkit-scrollbar-thumb {
   background-color: brown; /* Color of the scrollbar handle */
   border-radius: 10px; /* Rounded edges */
   border: 2px solid transparent; /* Padding around the thumb (creates distance) */
   background-clip: padding-box; /* Ensures the background doesn't overflow the border */
 }
+
 
 @media (max-width: 1000px) {
   .modal-content {

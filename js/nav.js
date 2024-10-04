@@ -59,7 +59,7 @@ function openModal(modalform, breed) {
               } else if (window.matchMedia("(max-width: 1000px)").matches) {
                 modalDiv.style.setProperty("max-width","60%");
               } else {
-                modalDiv.style.setProperty("max-width","35%");
+                modalDiv.style.setProperty("max-width","600px");
               };
             } 
             // Adjust modal width based on content width
