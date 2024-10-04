@@ -52,20 +52,22 @@
 }
   
 #book-buy-btn {
-  margin-top:15px;
+  margin-top:10px;
   background-color: saddlebrown;
   border: 2px solid #fff9c4;
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  /* box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0; */
+  box-shadow: 0 4px 15px rgba(255, 87, 34, 0.5); 
   box-sizing: border-box;
-  color: #fff;
+  color: #fefefe;
   cursor: pointer;
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
   outline: none;
   outline: 0;
-  padding: 10px 60px;
+  padding: 5px 20px;
+  width: 100%;
   text-align: center;
   transform: translateY(0);
   transition: transform 150ms, box-shadow 150ms;

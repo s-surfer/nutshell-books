@@ -584,7 +584,7 @@ nav .navbar .links li:hover .js-sub-menu{
 }
 
 .modal-content.active {
-  max-height: 75%;
+  max-height: 100%;
   * {
       opacity: 1;
   }
@@ -627,12 +627,12 @@ nav .navbar .links li:hover .js-sub-menu{
 /* Image list container for scroll - looked inside featurr*/
 #openLookInside {
   background-color: saddlebrown; 
-  color: wheat; 
-  /* border: 1px solid saddlebrown;  */
+  color: #fefefe; 
+  border: 1px solid #fff9c4;
   border-radius: 5px; 
-  padding: 2px 20px; 
+  padding: 5px 20px; 
   width: 100%;
-  font-size: 14px; 
+  font-size: 13px; 
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer; 
