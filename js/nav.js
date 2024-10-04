@@ -43,7 +43,7 @@ function openModal(modalform, breed) {
             modal.style.display = 'block';
            
             const imgElements = document.querySelectorAll('.breed-images');
-            // Loop through each image element and replace "breed" with the new value
+            // Loop through each image element and replace "breed" with the new value for the look-inside window
             imgElements.forEach(imgElement => {
                 imgElement.src = imgElement.src.replace("breed", breed);
             });
@@ -54,7 +54,6 @@ function openModal(modalform, breed) {
               modalDiv.style.setProperty("margin","50px auto");
               modalDiv.style.setProperty("padding","10px auto");
               
-
               if (window.matchMedia("(max-width: 600px)").matches) {
                 modalDiv.style.setProperty("max-width","90%");
               } else if (window.matchMedia("(max-width: 1000px)").matches) {
@@ -82,9 +81,12 @@ function closeModal() {
 // Event listeners for opening and closing the modal
 document.getElementById('openModalLink').addEventListener('click', () => {openModal("contact-us", "");});
 // this one is for look inside where breed is passed as an attribute
-document.getElementById('openLookInside').addEventListener('click', (e) => {
-  openModal("look-inside", e.target.getAttribute("breed"));
-});
+const element = document.getElementById("openLookInside");
+if (element) {
+  document.getElementById('openLookInside').addEventListener('click', (e) => {
+    openModal("look-inside", e.target.getAttribute("breed"));
+  });
+};
 
 document.getElementById('closeModal').addEventListener('click', closeModal);
 

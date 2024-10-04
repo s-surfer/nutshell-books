@@ -595,7 +595,7 @@ nav .navbar .links li:hover .js-sub-menu{
   margin: 200px auto; /* overridden for look inside within nav.js */
   padding: 20px;
   background: var(--modal-background-color);
-  max-width: 30%; /* Limits the width to 30% of the screen */
+  max-width: 500px; /* Limits the width to 30% of the screen */
   min-width: 250px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border: 1px solid saddlebrown;
