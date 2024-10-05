@@ -32,7 +32,7 @@ function openModal(modalform, breed) {
     const htmlContentDiv = document.getElementById('htmlContent');
     
     setTimeout(() => {
-        modalContent.classList.add('active');
+        modalContent.classList.add('show');
     }, 100);
     
     // Fetch external HTML content and inject it into the modal
@@ -47,11 +47,11 @@ function openModal(modalform, breed) {
             imgElements.forEach(imgElement => {
                 imgElement.src = imgElement.src.replace("breed", breed);
             });
-            console.log(">"+breed+"<");
             // change top and height for look inside
             const modalDiv = document.getElementById("modalContent");
             if (breed !== "") {
-              modalDiv.style.setProperty("margin","50px auto");
+              modalDiv.style.setProperty("top","45%");
+              modalDiv.style.setProperty("left","50%");
               modalDiv.style.setProperty("padding","10px auto");
               
               if (window.matchMedia("(max-width: 600px)").matches) {
@@ -75,7 +75,9 @@ function closeModal() {
     document.getElementById('myModal').style.display = 'none';
     const modalContent = document.querySelector('.modal-content');
     modalContent.removeAttribute('style'); // Reset inline styles
-    modalContent.classList.remove('active');
+    modalContent.classList.remove('show');
+    // remove htmlcontent
+    document.getElementById("htmlContent").innerHTML = "";
 }
 
 // Event listeners for opening and closing the modal
@@ -94,8 +96,7 @@ document.getElementById('closeModal').addEventListener('click', closeModal);
 window.onclick = function(event) {
     const modal = document.getElementById('myModal');
     if (event.target === modal) {
-        modal.style.display = 'none';
-        modalContent.classList.remove('active');
+      closeModal();
     }
 };
 
@@ -146,66 +147,14 @@ function modalSubmit(e) {
         form.reset();
         setTimeout(() => {
           result.style.display = "none";
-        }, 5000);
-        // close the modal window
+        }, 200);
+    //     // close the modal window
         closeModal();
   
         // Open the modal
-        openThankYouModal();
-  
+        setTimeout(() => {
+          openModal("message-sent","");
+        }, 100);      
       });
   };
-  
-   // Function to create and open a modal dynamically
-  function openThankYouModal() {
-      
-    // Create modal elements dynamically
-    const modal = document.createElement('div');
-    modal.classList.add('modal');
-  
-    const modalContent = document.createElement('div');
-    modalContent.classList.add('modal-content');
-    
-    setTimeout(() => {
-      modalContent.classList.add('active');
-    }, 100);
-  
-    // Create close button
-    const closeBtn = document.createElement('span');
-    closeBtn.classList.add('close');
-    closeBtn.innerHTML = '&times;';
-    closeBtn.onclick = function() {
-      modal.style.display = 'none'; // Close the modal when clicked
-    };
-  
-    // Create envelope image
-    const envelopeHeader = document.createElement('h2');
-    envelopeHeader.innerHTML = "<i class='fas fa-envelope-open-text'></i><br /><br />Your mail was sent successfully!<br />";
-    
-    // Create thank you message
-    const thankYouMessage = document.createElement('p');
-    thankYouMessage.textContent = "Thank you for reaching out to us, we'll be in touch shortly!";
-  
-    // Append elements to modal content
-    modalContent.appendChild(closeBtn);
-    modalContent.appendChild(envelopeHeader);
-    modalContent.appendChild(thankYouMessage);
-  
-    // Append modal content to modal
-    modal.appendChild(modalContent);
-  
-    // Append modal to body
-    document.body.appendChild(modal);
-  
-    // Show the modal
-    modal.style.display = 'block';
-  
-    // Close the modal when clicking outside the modal content
-    window.onclick = function(event) {
-      if (event.target === modal) {
-        modal.style.display = 'none';
-      }
-    };
-  
-  }
-  
+ 

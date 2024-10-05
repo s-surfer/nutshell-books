@@ -1,8 +1,6 @@
 
 /* ----------------------------  CONTACT PAGE ---------------------- */
 
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
-
 :root {
   --background-color: #fff9c4 /*#fffde7;*/
 }
@@ -97,9 +95,7 @@ font-family: 'Roboto', sans-serif;
   }
   
   .form-textarea {
-     /* min-height: 120px;  */
     height: auto;
-    /* padding-top: 20px; */
   }
   
   /* new form design  below */
@@ -112,12 +108,12 @@ font-family: 'Roboto', sans-serif;
     transition: 0.4s;
     opacity: 0.75;
     font-size:14px;
+    font-weight: 400;
   }
   
   /* When input is focused, or the placeholder is not being displayed, change the border to blue */
   .form-inputs:focus, .form-inputs:not(:placeholder-shown) {
     outline: 1px solid saddlebrown;
-    /* outline-offset: 2px; */
   }
   
   /* When input is focused, or the placeholder is not being displayed, change the placeholder size, position and color */
@@ -179,11 +175,6 @@ font-family: 'Roboto', sans-serif;
     color: saddlebrown;
     font-weight: 600;
     animation: blink 1s infinite; 
-}
-
-.fa-envelope-open-text {
-  font-size: 84px;
-  color: #4cd137;
 }
 
 @media (max-width: 500px) {

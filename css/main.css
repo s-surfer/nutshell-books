@@ -575,24 +575,19 @@ nav .navbar .links li:hover .js-sub-menu{
 .modal {
   display: none; /* Hidden by default */
   position: fixed;
-  z-index: 1000;
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   background-color: rgba(0,0,0,0.6); /* Black background with opacity */
-}
-
-.modal-content.active {
-  max-height: 100%;
-  * {
-      opacity: 1;
-  }
+  z-index: 1000;
 }
 
 .modal-content {
   position: relative;
-  margin: 200px auto; /* overridden for look inside within nav.js */
+  /*margin: 400px auto; /* overridden for look inside within nav.js */
+  top: 30%;
+  left: 50%;
   padding: 20px;
   background: var(--modal-background-color);
   max-width: 500px; /* Limits the width to 30% of the screen */
@@ -600,17 +595,25 @@ nav .navbar .links li:hover .js-sub-menu{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border: 1px solid saddlebrown;
   border-radius: 2%;
-  transition: width 0.1s ease;
   text-align: center;
-  /* transition in */
-  max-height: 0;
-  transition: max-height 0.25s ease;
-  * {
-      opacity: 0;
-      transition: opacity 0.7s ease;
-      z-index: 1000;
-  } 
+  transform: translate(-50%, -50%) scale(0); 
+  /* transform: scale(0);  hidden initially */
+  z-index: 1000;
+  transition: transform 0.5s ease-in-out; /* Animation for the scale transition */
 }
+
+.modal-content.show {
+  /* position: relative; */
+  transform: translate(-50%, -50%) scale(1); /* Expands from center */
+}
+
+.modal-heading {
+  color: saddlebrown;
+  font-size: 16px;
+  padding: 0 20px;
+  font-weight: 500;
+}
+
 .close {
   position: absolute;
   top: -5px;
@@ -659,8 +662,6 @@ nav .navbar .links li:hover .js-sub-menu{
 
 .image-list img {
   width: 100%;
-  /* max-width: 500px; */
-  /* height: auto; */
   border-radius: 8px;
   cursor: pointer;
 }
@@ -685,6 +686,12 @@ nav .navbar .links li:hover .js-sub-menu{
   border-radius: 10px; /* Rounded edges */
   border: 2px solid transparent; /* Padding around the thumb (creates distance) */
   background-clip: padding-box; /* Ensures the background doesn't overflow the border */
+}
+
+/* message sent html */
+.fa-envelope-open-text {
+  font-size: 84px;
+  color: #4cd137;
 }
 
 
