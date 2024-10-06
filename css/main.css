@@ -9,7 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     background: linear-gradient(300deg, #fef5b1,  #facc30, #f7941d );
-    background-size: cover;
+    background-size: 300% 300%;
     animation: gradient-animation 12s ease infinite;
     font-family: 'Roboto', sans-serif;
     z-index: 0;
@@ -53,7 +53,6 @@ p, li, blockquote {
     background-position: 0% 50%;
   }
 }
-
 
 /* ---------------- navigation all pages --------------------------- */
 
