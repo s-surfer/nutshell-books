@@ -98,7 +98,7 @@ nav{
   display: block;
   top: 20;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   height: var(--top-nav-height);
   background: var(--navbar-background);
@@ -112,7 +112,7 @@ nav{
 nav .navbar{
   height: 100%;
   max-width: var(--navbar-width);
-  width: 100%;
+  /* width: 100%; */
   color: blue;
   display: flex;
   align-items: center;
