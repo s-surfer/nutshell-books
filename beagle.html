@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A beagle puppy-care book providing invaluable information and guidance - part of the you and your puppy in a nutshell series." />
+    <meta name="robots" content="index, follow" />
+
     <title>Beagle | Nutshell Books</title>
     <link rel="icon" type="image/x-icon" href="./assets/images/nutshell-favicon.ico"/>
 
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.min.css">
     <link rel="stylesheet" href="./css/books.css">
-             
+    <link rel="preload" href="./css/modal.css" as="style" onload="this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="./css/modal.css"></noscript>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>          
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontawesome-free-6.2.1@6.2.1/css/all.min.css">
     
@@ -68,7 +75,7 @@
         <div id="book-lft-rw">
             <button id="openLookInside" breed="beagle">look inside</button>
             <div>
-                <img src="./assets/images/book-covers/Beagle-cov-web-rgb-2.avif" alt="Image of Beagle Puppy book cover">
+                <img src="./assets/images/book-covers/Beagle-cov-web-rgb-2.avif" alt="Beagle Puppy book cover">
             </div>
             <a id="book-buy-btn" href="https://www.amazon.co.uk/Your-Beagle-Puppy-easy-follow/dp/1838474838/" target="_blank">BUY</a>
         </div>
@@ -97,26 +104,26 @@
         <div class="sliders">
             <div class="slider-deck">
                 <div class="slider-card">
-                    <img class="slider-img" src="./assets/images/beagle/Beagle1-web.avif" alt="Image of Beagle Puppy" />
+                    <img class="slider-img" src="./assets/images/beagle/Beagle1-web.avif" alt="Beagle Puppy chewing on stick" />
                 </div>
                 <div class="slider-card">
-                    <img class="slider-img" loading="lazy" src="./assets/images/beagle/Beagle2-web.avif" alt="Image of Beagle Puppy" />
-                </div>
-            </div>
-            <div class="slider-deck">
-                <div class="slider-card">
-                    <img class="slider-img" src="./assets/images/beagle/Beagle3-web.avif" alt="Image of Beagle Puppy" />
-                </div>
-                <div class="slider-card">
-                    <img class="slider-img" loading="lazy" src="./assets/images/beagle/Beagle6-web.avif" alt="Image of Beagle Puppy" />
+                    <img class="slider-img" loading="lazy" src="./assets/images/beagle/Beagle2-web.avif" alt="Beagle Puppy with mum" />
                 </div>
             </div>
             <div class="slider-deck">
                 <div class="slider-card">
-                    <img class="slider-img" src="./assets/images/beagle/Beagle5-web.avif" alt="Image of Beagle Puppy" />
+                    <img class="slider-img" src="./assets/images/beagle/Beagle3-web.avif" alt="Beagle Puppy playing with todler" />
                 </div>
                 <div class="slider-card">
-                    <img class="slider-img" loading="lazy" src="./assets/images/beagle/Beagle4-web.avif" alt="Image of Beagle Puppy" />
+                    <img class="slider-img" loading="lazy" src="./assets/images/beagle/Beagle6-web.avif" alt="Beagle Puppy jumping over hurdles" />
+                </div>
+            </div>
+            <div class="slider-deck">
+                <div class="slider-card">
+                    <img class="slider-img" src="./assets/images/beagle/Beagle5-web.avif" alt="Beagle Puppy stretching for treat" />
+                </div>
+                <div class="slider-card">
+                    <img class="slider-img" loading="lazy" src="./assets/images/beagle/Beagle4-web.avif" alt="Beagle Puppy litter being held" />
                 </div>
             </div>
         </div>
@@ -128,7 +135,7 @@
             
             <div id="footer-left" class="footer-ctn">
                 <div>
-                    <h2>Contact</h2>
+                    <p class="footer-header">Contact</p>
                     <address>
                         <span>Nutshell Books Ltd.</span>
                         <span>Publisher</span>
@@ -139,7 +146,7 @@
             </div>
             <div id="footer-center" class="footer-ctn">
                 <div>
-                    <h2>Current Best Sellers</h2>
+                    <p class="footer-header">Current Best Sellers</p>
                     <p>Copies of all Nutshell Books are held by the British Library and other UK legal deposit libraries</p>
                     <ol class="bestsellers">
                         <li><a href="./cocker-spaniel.html">Cocker Spaniel</a></li>
@@ -150,7 +157,7 @@
             </div>
             <div id="footer-right" class="footer-ctn">
                 <div>
-                    <h2>MISCELLANEOUS</h2>
+                    <p class="footer-header">MISCELLANEOUS</p>
                     <ul class="miscellaneous">
                         <li><a href="./privacy.html">Privacy Policy</a></li>
                     </ul>
@@ -167,9 +174,8 @@
 
     </footer>   
     
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./js/slider.js"></script>   
-    <script type="text/javascript" src="./js/nav.js"></script>   
+    <script type="text/javascript" src="./js/nav.min.js"></script>   
 
  </body>
 </html>

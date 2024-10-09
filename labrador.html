@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Labrador puppy-care book providing invaluable information and guidance - part of the you and your puppy in a nutshell series." />
+    <meta name="robots" content="index, follow" />
+
     <title>Labrador | Nutshell Books</title>
     <link rel="icon" type="image/x-icon" href="./assets/images/nutshell-favicon.ico"/>
     
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.min.css">
     <link rel="stylesheet" href="./css/books.css">
-         
+    <link rel="preload" href="./css/modal.css" as="style" onload="this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="./css/modal.css"></noscript>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>          
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontawesome-free-6.2.1@6.2.1/css/all.min.css">
      
@@ -68,7 +75,7 @@
         <div id="book-lft-rw">
             <button id="openLookInside" breed="labrador">look inside</button>
             <div>
-                <img src="./assets/images/book-covers/LAB-cov-web-RGB-194x300.avif" alt="Image of Cockapoo Puppy book cover">
+                <img src="./assets/images/book-covers/LAB-cov-web-RGB-194x300.avif" alt="Labrador Puppy book cover">
             </div>
             <a id="book-buy-btn" href="https://www.amazon.co.uk/Labrador-Puppy-Nutshell-easy-follow/dp/1916189741" target="_blank">BUY</a>
         </div>
@@ -97,26 +104,26 @@
         <div class="sliders">
             <div class="slider-deck">
                 <div class="slider-card">
-                    <img class="slider-img" src="./assets/images/labrador/Lab1-web.avif" alt="Image of Labrador puppy">
+                    <img class="slider-img" src="./assets/images/labrador/Lab1-web.avif" alt="Labrador puppy chewing on treat">
                 </div>
                 <div class="slider-card">
-                    <img class="slider-img" loading="lazy" src="./assets/images/labrador/Lab4-web.avif" alt="Image of Labrador puppy">
-                </div>
-            </div>
-            <div class="slider-deck">
-                <div class="slider-card">
-                    <img class="slider-img" src="./assets/images/labrador/Lab2-web.avif" alt="Image of Labrador puppy">
-                </div>
-                <div class="slider-card">
-                    <img class="slider-img" loading="lazy" src="./assets/images/labrador/Lab5-web.avif" alt="Image of Labrador puppy">
+                    <img class="slider-img" loading="lazy" src="./assets/images/labrador/Lab4-web.avif" alt="Labrador puppy with mum">
                 </div>
             </div>
             <div class="slider-deck">
                 <div class="slider-card">
-                    <img class="slider-img" src="./assets/images/labrador/Lab3-web.avif" alt="Image of Labrador puppy">
+                    <img class="slider-img" src="./assets/images/labrador/Lab2-web.avif" alt="Labrador puppy on the sofa">
                 </div>
                 <div class="slider-card">
-                    <img class="slider-img" loading="lazy" src="./assets/images/labrador/Lab6-web.avif" alt="Image of Labrador puppy">
+                    <img class="slider-img" loading="lazy" src="./assets/images/labrador/Lab5-web.avif" alt="Labrador puppy trying to get treats">
+                </div>
+            </div>
+            <div class="slider-deck">
+                <div class="slider-card">
+                    <img class="slider-img" src="./assets/images/labrador/Lab3-web.avif" alt="Labrador puppy playing">
+                </div>
+                <div class="slider-card">
+                    <img class="slider-img" loading="lazy" src="./assets/images/labrador/Lab6-web.avif" alt="Two Labrador puppies being held">
                 </div>
             </div>
         </div>
@@ -128,7 +135,7 @@
             
             <div id="footer-left" class="footer-ctn">
                 <div>
-                    <h2>Contact</h2>
+                    <p class="footer-header">Contact</p>
                     <address>
                         <span>Nutshell Books Ltd.</span>
                         <span>Publisher</span>
@@ -139,7 +146,7 @@
             </div>
             <div id="footer-center" class="footer-ctn">
                 <div>
-                    <h2>Current Best Sellers</h2>
+                    <p class="footer-header">Current Best Sellers</p>
                     <p>Copies of all Nutshell Books are held by the British Library and other UK legal deposit libraries</p>
                     <ol class="bestsellers">
                         <li><a href="./cocker-spaniel.html">Cocker Spaniel</a></li>
@@ -150,7 +157,7 @@
             </div>
             <div id="footer-right" class="footer-ctn">
                 <div>
-                    <h2>MISCELLANEOUS</h2>
+                    <p class="footer-header">MISCELLANEOUS</p>
                     <ul class="miscellaneous">
                         <li><a href="./privacy.html">Privacy Policy</a></li>
                     </ul>
@@ -168,7 +175,7 @@
     </footer>   
     
     <script type="text/javascript" src="./js/slider.js"></script>   
-    <script type="text/javascript" src="./js/nav.js"></script>   
+    <script type="text/javascript" src="./js/nav.min.js"></script>   
    
 </body>
 </html>
