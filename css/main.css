@@ -86,6 +86,12 @@ p, li, blockquote {
     margin-right: 0 20px;
 }
 
+.nutshell-logo {
+  height: 100%;
+  width: 100%;
+  margin-right: 0 20px;
+}
+
 #active-link > a {
   font-weight: 600;
 }
