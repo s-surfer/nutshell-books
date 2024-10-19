@@ -537,6 +537,10 @@ nav .navbar .links li:hover .js-sub-menu{
     max-width: 100vw;
   } 
 
+  nav .navbar .nav-links .sub-menu{
+    max-width: 90vw;
+  } 
+
   .navbar .fa-close {
    margin-right: 20px;
   }
