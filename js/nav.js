@@ -157,4 +157,25 @@ function modalSubmit(e) {
         }, 100);      
       });
   };
- 
+
+
+////// lazy loading images for mobiles ////////
+function applyLazyLoading() {
+  const lazyImages = document.querySelectorAll('img.lazy'); // Select only images with class "lazy"
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth <= 700) {
+      lazyImages.forEach(img => {
+          img.setAttribute('loading', 'lazy');
+      });
+  } else {
+      lazyImages.forEach(img => {
+          img.removeAttribute('loading'); // Remove lazy loading for larger screens
+      });
+  }
+}
+// Run the function initially
+applyLazyLoading();
+
+// Reapply on window resize
+window.addEventListener('resize', applyLazyLoading);

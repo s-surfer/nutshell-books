@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-136HGRF7KS"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -12,17 +13,17 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="All the books available within the you and your puppy in a nutshell series - each one an invaluable guide." />
+    <meta name="description" content="Privacy information provided by nutshell books" />
     <meta name="robots" content="index, follow" />
-    
-    <title>All Books | Nutshell Books</title>
+
+    <title>Sitemap | Nutshell Books</title>
     <link rel="icon" type="image/x-icon" href="./assets/images/nutshell-favicon.ico"/>
-    
+
     <link rel="stylesheet" href="./css/main.min.css">
-    <link rel="stylesheet" href="./css/all-books.css">
     <link rel="preload" href="./css/modal.css" as="style" onload="this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="./css/modal.css"></noscript>
-     
+    <link rel="stylesheet" href="./css/sitemap.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -43,7 +44,7 @@
             </div>
             <ul class="links">
                 <li class="topnav"><a class="fa-house" href="./">Home</a></li>
-                <li class="topnav"  id="active-link"><a class="fa-books" href="./all-books.html">Books</a></li>
+                <li class="topnav"><a class="fa-books" href="./all-books.html">Books</a></li>
                 <li  class="topnav">
                 <a class="submenu-link fa-breeds" href="#">Breeds</a>
                 <i class='fa fa-chevron-right htmlcss-arrow arrow' style="font-size:14px"></i>
@@ -79,74 +80,28 @@
         </div>
     </div>
     
-    <!-- top section with intro text and puppies book -->
-    <div id=books-top-ctn>
-        <div id="book-lft-row">
-            <h1>in a nutshell</h1>
-            <div class="text-lft">
-                <p>Whether you’re new to owning a dog, simply out of practice, or choosing a breed you have little experience with, here is all the information you will need (and none of the padding you don’t) to raise a happy, healthy and well-behaved companion.</p>
-                <p>Each book is a summary of the most up-to-date findings in puppy care, presented in a format that is clear, concise and easy to read, so you can spend more time with your puppy and less time with your nose in the pages.</p>
-            </div>
-        </div>
-        <div id="book-rgt-row">
-            <h2>All Puppies Guide</h2>
-            <div id="puppy-book-ctn">
-                <div id="puppy-img-ctn">
-                    <a href="./your-puppy.html"><img id="puppies-book-img" class="book-cover lazy" src="./assets/images/book-covers/book-puppy-194x300.avif" alt="You and Your Puppy book cover"></a>
-                </div>
-                <div id="puppy-book-text">
-                    <p><span>You and Your Puppy in a Nutshell</span> covers pure breeds, cross breeds and mixed breeds alike. This is the best choice for you if you are:</p>
-                    <ul>
-                        <li>considering dog ownership in principle<br /></li>
-                        
-                        <li>or weighing up what type of dog would be the best fit for your household and lifestyle.</li>
-                    </ul>
-                </div>   
-            </div>
-        </div>
+    <!-- Main Content-->
+     
+    <div class="sitemap-content">
+        <h1>XML Sitemap</h1>
+        <div id="xmlOutput" class="xml-container"></div>   <!-- hold header info -->
+        
+        <script>
+            // Function to fetch and display XML content --> inserted intp eiher xmlHeader or xmlTable
+            fetch('./sitemap.xml')
+                .then(response => response.text())
+                .then(data => {
+                    displayStyledXML(data);
+                })
+                .catch(error => {
+                    document.getElementById('xmlOutput').textContent = 'Error loading XML';
+                    console.error('Error:', error);
+                });
+        </script>
     </div>
 
-    <div id="book-selection">
-        <div id="book-selection-frame">
-            <div id="breed-heading">
-                <h3>Breed-Specific Guides</h3>
-            </div>
-            <div class="breed-radio-btns">
-                <input type="radio" class="br-btn" name="options-base" id="all-breed" autocomplete="off" checked>
-                <label class="btn" for="all-breed">ALL</label>
-
-                <input type="radio" class="br-btn" name="options-base" id="small-breed" autocomplete="off">
-                <label class="btn" for="small-breed">SMALL</label>
-
-                <input type="radio" class="br-btn" name="options-base" id="medium-breed" autocomplete="off">
-                <label class="btn" for="medium-breed">MEDIUM</label>
-
-                <input type="radio" class="br-btn" name="options-base" id="large-breed" autocomplete="off">
-                <label class="btn" for="large-breed">LARGE</label>
-            </div>    
-        </div>
-    </div>
-
-    <div id="book-wrapper">
-        <div id="book-covers">
-            <a href="./beagle.html"><img class="book-cover all-breeds medium-breed" loading="lazy" src="./assets/images/book-covers/Beagle-cov-web-rgb-2.avif" alt="Beagle puppy book cover"></a>
-            <a href="./cavalier-king.html"><img class="book-cover all-breeds small-breed" loading="lazy" src="./assets/images/book-covers/CKCS-Cov-Web-RBG-194x300.avif" alt="Cavalier King Charles Spaniel puppy book cover"></a>
-            <a href="./cavapoo.html"><img class="book-cover all-breeds medium-breed" loading="lazy" src="./assets/images/book-covers/CAVA-cov-web-rgb-194x300.avif" alt="Cavapoo puppy book cover"></a>
-            <a href="./chihuahua.html"><img class="book-cover all-breeds small-breed" loading="lazy" src="./assets/images/book-covers/CHI-cov-web-rgb-194x300.avif" alt="Chihauhua puppy book cover"></a>
-            <a href="./cockapoo.html"><img class="book-cover all-breeds medium-breed" loading="lazy" src="./assets/images/book-covers/Cockapoo-Cov-Web-RGB-194x300.avif" alt="Cockapoo puppy book cover"></a>
-            <a href="./cocker-spaniel.html"><img class="book-cover all-breeds medium-breed" loading="lazy" src="./assets/images/book-covers/Cocker-Cov-Web-RGB-194x300.avif" alt="Cocker Spaniel puppy book cover"></a>
-            <a href="./dachshund.html"><img class="book-cover all-breeds small-breed" loading="lazy" src="./assets/images/book-covers/DACH-Web-Cov-RGB-194x300.avif" alt="Dachshund puppy book cover"></a>
-            <a href="./german-shepherd.html"><img class="book-cover all-breeds large-breed" loading="lazy" src="./assets/images/book-covers/GSD-cov-web2-rgb-194x300.avif" alt="German Shepherd puppy book cover"></a>
-            <a href="./golden-retriever.html"><img class="book-cover all-breeds large-breed" loading="lazy" src="./assets/images/book-covers/GR-cov-web-RGB-194x300.avif" alt="Golden Retriever puppy book cover"></a>
-            <a href="./jack-russell.html"><img class="book-cover all-breeds small-breed" loading="lazy" src="./assets/images/book-covers/book-jackrussell-194x300.avif" alt="Jack Russell puppy book cover">
-            <a href="./labrador.html"><img class="book-cover all-breeds large-breed" loading="lazy" src="./assets/images/book-covers/LAB-cov-web-RGB-194x300.avif" alt="Labrador puppy book cover"></a>
-            <a href="./staffie.html"><img class="book-cover all-breeds medium-breed" loading="lazy" src="./assets/images/book-covers/STAFFIE-Web-cover-REV-194x300.avif" alt="Staffie puppy book cover"></a>
-            <a href="./yorkie.html"><img class="book-cover all-breeds small-breed" loading="lazy" src="./assets/images/book-covers/YT-cover-web-RGB-194x300.avif" alt="Yorkshire Terrier puppy book cover"></a>
-        </div>
-    </div>
-
-    <!-- footer -->
-    <footer>
+     <!-- footer -->
+     <footer>
         <footer-section>
             
             <div id="footer-left" class="footer-ctn">
@@ -215,9 +170,9 @@
         </div>
 
     </footer>   
-
-<script type="text/javascript" src="./js/nav.min.js"></script>   
-<script rel="text/javascript" src="./js/all-books.js"></script>
+    
+    <script type="text/javascript" src="./js/nav.min.js"></script>   
+    <script type="text/javascript" src="./js/sitemap.js"></script>   
 
 </body>
 </html>

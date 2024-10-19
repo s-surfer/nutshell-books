@@ -1,0 +1,48 @@
+ /* General styles for XML content */
+.sitemap-content {
+    margin: 20px auto 40px;
+}
+
+h1 {
+    margin: 0 10px ;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: saddlebrown;
+    font-weight: 500;
+}
+
+.xml-container {
+    padding: 10px;
+}
+
+#sitemap td, #sitemap th {
+    border: 1px solid saddlebrown;
+    padding: 2px;
+}
+
+#sitemap tr:nth-child(odd){
+    background-color: rgb(139, 69, 19, 0.25);
+    color: saddlebrown;
+}
+
+#sitemap tr:nth-child(even){
+    background-color: rgb(139, 69, 19, 0.05);
+    color: saddlebrown;
+}
+
+#sitemap tr:hover {
+    background-color: #ddd;
+}
+
+#sitemap th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: saddlebrown;
+    color:#f2f2f2;
+}

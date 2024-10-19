@@ -1,13 +1,13 @@
 body {
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
     margin: 0px;
     padding: 0px;
     border: none;
     display: flex;
     flex-direction: column;
     background: linear-gradient(300deg, #fef5b1,  #facc30, #f7941d );
-    background-size: 400% 300%;
+    background-size: 300% 300%;
     animation: gradient-animation 12s ease infinite;
     font-family: 'Roboto', sans-serif;
     z-index: 0;
@@ -78,7 +78,12 @@ p, li, blockquote {
 .logo {
   height: 100%;
   aspect-ratio: 2;
-  margin: 0 20px;
+}
+
+#nutshell-logo {
+    height: 100%;
+    width: 100%;
+    margin-right: 0 20px;
 }
 
 .nutshell-logo {
@@ -97,7 +102,7 @@ nav{
   display: block;
   top: 20;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   height: var(--top-nav-height);
   background: var(--navbar-background);
@@ -111,12 +116,13 @@ nav{
 nav .navbar{
   height: 100%;
   max-width: var(--navbar-width);
+  /* width: 100%; */
   color: blue;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  /* padding: 0 20px; */
+  /* padding: 0 50px; */
 }
 
 nav .navbar .nav-links{
@@ -125,7 +131,6 @@ nav .navbar .nav-links{
   justify-content: center;
   line-height: var(--nav-links-line-height);
 }
-
 nav .navbar .links{
   display: flex;
 }
@@ -139,7 +144,7 @@ nav .navbar .links li{
   list-style: none;
 }
 
-nav .navbar .links li a {
+nav .navbar .links li a{
   line-height: var(--nav-links-line-height);
   width:100%;
   text-decoration: none;
@@ -256,7 +261,7 @@ nav .navbar .links li:hover .js-sub-menu{
   } 
 
   .nav-links {
-    margin-right: 30px !important;
+    margin-right: 10px !important;
   }
 
   .topnav {
@@ -657,11 +662,18 @@ nav .navbar .links li:hover .js-sub-menu{
 
 /*======================== sliders at botton of home page and in each book page ============ */
 
+.slider-ctn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+
 .sliders {
   display:flex;
   flex-direction: row;
   justify-content: center;
-  margin: 10px 30px 40px 20px;
+  margin: 10px auto;
 }
 
 .slider-deck {
@@ -743,102 +755,49 @@ nav .navbar .links li:hover .js-sub-menu{
 
 /* ---------------- footer all pages -------------------------- */
 
-footer {
-  background-color: #333;
-  font-size: 14px;
-  color: #f9d835;
-  a {
-    color: #f9d835;
-    text-transform: none;
-  }
-}
-
 footer-section {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    max-width: 1280px;
-    margin: 20px auto 0;
-  
+    margin: 0 auto;
+    background-color: #444;
+    font-size: 12.8px;
+    color: #ddd;
 }
 
 .footer-ctn {
+  width: 400px;
   min-width: 250px;
 }
 
 .footer-header {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.5;
-  opacity: 1;
-  color:rgb(243, 150, 28);
-  margin: 0 0 10px 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 10px 0;
 }
 
 #footer-left {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: left;
-  width: 300px;
-  margin-left: 20px;
+  min-width: 250px;
+  margin: 0 10px;
   div {
     width:150px;
     margin: 10px;
   }
 }
 
-#footer-logo{
-  height: 70px;
-  margin: 10px auto;
-  opacity: 1;
-  .logo-name {
-    height: 70px
-  }
-}
-
-address {
-  display: flex;
-  flex-direction: column;
-  justify-content:center;
-  margin: 0 10px;
-  color:rgb(249, 216, 53);
-  opacity: 1;
-  font-weight: 400;
-  text-transform: none;
-  a {
-    text-transform: lowercase;
-    color:#f9d835;
-    &:hover {
-      color:#f7941d;
-    }
-  }
-}
-
-
 #footer-center {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width:600px;
-  margin-left: 20px;
-  .inner-ctn {
+  margin: 0 10px;
+  min-width: 250px;
+  div {
     margin: 10px;
-    li {
-      margin-right: 20px;
-    }
-  }
-}
-
-.footer-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  a {
-    opacity: 1;
-    color:#f9d835;
-    font-size: 16px;
-    line-height: 2;
-    text-decoration: none;
   }
 }
 
@@ -846,55 +805,46 @@ address {
   display: flex;
   flex-direction: row;
   justify-content: right;
-  width: 300px;
-  margin-left: 20px;
-  margin-right: 40px;
-  .inner-ctn {
+  min-width: 250px;
+  margin: 0 10px;
+  div {
+    width: 120px;
     margin: 10px;
   }
-  :hover {
-    color:#f7941d;
-  }
 }
 
-.book-lists {
-  display:flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-  :hover {
-    color:#f7941d;
-  }
-}
-
-
-.copyright-wrapper {
-  max-width: 1280px;
+address {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  margin: 20px auto;
-  line-height: 2;
+  flex-direction: column;
+  justify-content:center;
+  a {
+    color: white;;
+  }
 }
 
-.copyright-lft {
-  margin-left: 30px;
+.bestsellers {
+    padding-left: 0;
+    list-style-position: inside;
 }
 
-.copyright-center {
-  text-align: center;
+.miscellaneous {
+    list-style-type: none;
+    padding: 0;
+    a {
+      color: white;
+    }
 }
 
-.copyright-rgt {
-  margin-right: 50px;
-  text-align: end;
+.copyright {
+  background-color: #eee;
+  font-size: 12px;
+  padding: 8px;
+
 }
 
-@media (max-width: 998px) { 
+@media (max-width: 798px) { 
   
-  footer-section, .copyright-wrapper{
+  footer-section {
     flex-direction: column;
   }
 
@@ -902,13 +852,8 @@ address {
     justify-content: left;
   }
 
-  .copyright-center, .copyright-rgt {
-    text-align: left;
-    margin-left: 30px;
-  }
-
   .footer-ctn {
-    width: 60%;
+    width: 90%;
   }
   
 

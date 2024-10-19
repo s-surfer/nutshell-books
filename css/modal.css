@@ -56,33 +56,6 @@
     cursor: pointer;
   }
   
-  /* Image list container for scroll - looked inside featurr*/
-  #openLookInside {
-    background-color: saddlebrown; 
-    color: #fefefe; 
-    border: 1px solid #fff9c4;
-    border-radius: 5px; 
-    padding: 5px 20px; 
-    width: 100%;
-    font-size: 13px; 
-    font-weight: 600;
-    text-transform: uppercase;
-    cursor: pointer; 
-    margin-bottom: 5px;
-    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.5); 
-    transition: transform 0.2s, box-shadow 0.2s; 
-  }
-  
-  #openLookInside:hover {
-    background-color: green; 
-    transform: scale(1.05); 
-    box-shadow: 0 6px 20px rgba(255, 87, 34, 0.7); 
-  }
-  
-  #openLookInside:active {
-    transform: scale(0.95); 
-  }
-  
   .image-list {
     display: flex;
     flex-direction: column;
