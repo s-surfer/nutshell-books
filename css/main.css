@@ -79,7 +79,7 @@ p, li, blockquote {
   height: 100%;
   aspect-ratio: 2;
   margin-left: 20px;
-  margin-right: 10px;
+  margin-right: 0px;
 }
 
 .nutshell-logo {
