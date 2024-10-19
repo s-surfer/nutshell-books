@@ -78,13 +78,13 @@ p, li, blockquote {
 .logo {
   height: 100%;
   aspect-ratio: 2;
-  margin: 0 20px;
+  margin-left: 20px;
+  margin-right: 10px;
 }
 
 .nutshell-logo {
   height: 100%;
   width: 100%;
-  margin-right: 0 20px;
 }
 
 #active-link > a {
@@ -900,6 +900,7 @@ address {
 
   #footer-center, #footer-right {
     justify-content: left;
+    max-width: 350px;
   }
 
   .copyright-center, .copyright-rgt {
