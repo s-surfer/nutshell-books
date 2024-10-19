@@ -900,12 +900,16 @@ address {
 
   #footer-center, #footer-right {
     justify-content: left;
-    max-width: 350px;
+    max-width: 300px;
+    a {
+      font-size: 13px;
+    }
   }
 
-  .copyright-center, .copyright-rgt {
+  .copyright-lft, .copyright-center, .copyright-rgt {
     text-align: left;
     margin-left: 30px;
+    font-size: 11px;
   }
 
   .footer-ctn {
