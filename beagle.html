@@ -18,7 +18,7 @@
     <title>Beagle | Nutshell Books</title>
     <link rel="icon" type="image/x-icon" href="./assets/images/nutshell-favicon.ico"/>
 
-    <link rel="stylesheet" href="./css/main..mincss">
+    <link rel="stylesheet" href="./css/main.min.css">
     <link rel="stylesheet" href="./css/books.css">
     <link rel="preload" href="./css/modal.css" as="style" onload="this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="./css/modal.css"></noscript>
@@ -40,41 +40,41 @@
             </div>
             <div class="nav-links">
                 <div class="sidebar-logo">
-                <span class="logo-name"><img class="nutshell-logo" src="./assets/images/nutshell-logo-2.avif" alt="Nutshell Logo"></span>
-                <i class='fa fa-close' ></i>
-            </div>
-            <ul class="links">
-                <li class="topnav"><a class="fa-house" href="./">Home</a></li>
-                <li class="topnav"><a class="fa-books" href="./all-books.html">Books</a></li>
-                <li  class="topnav" id="active-link">
-                <a class="submenu-link fa-breeds" href="#">Breeds</a>
-                <i class='fa fa-chevron-right htmlcss-arrow arrow' style="font-size:14px"></i>
-                <ul class="htmlCss-sub-menu sub-menu">
-                    <li><a href="./your-puppy.html">All Puppies</a></li>
-                    <li><a href="./beagle.html">Beagle</a></li>
-                    <li><a href="./cavalier-king.html">Cavalier King Charles</a></li>
-                    <li><a href="./cavapoo.html">Cavapoo</a></li>
-                    <li><a href="./chihuahua.html">Chihuahua</a></li>
-                    <li><a href="./cockapoo.html">Cockapoo</a></li>
-                    <li><a href="./cocker-spaniel.html">Cocker Spaniel</a></li>
-                    <li><a href="./dachshund.html">Dachshund</a></li>
-                    <li><a href="./german-shepherd.html">German Shepherd</a></li>
-                    <li><a href="./golden-retriever.html">Golden Retriever</a></li>
-                    <li><a href="./jack-russell.html">Jack Russell</a></li>
-                    <li><a href="./labrador.html">Labrador Retriever</a></li>
-                    <li><a href="./staffie.html">Staffie (Staffordshire Bull)</a></li>
-                    <li><a href="./yorkie.html">Yorkie (Yorkshire Terrier)</a></li>
+                    <span class="logo-name"><img class="nutshell-logo" src="./assets/images/nutshell-logo-2.avif" alt="Nutshell Logo"></span>
+                    <i class='fa fa-close' ></i>
+                </div>
+                <ul class="menu">
+                    <li class="menu-link"><a href="./"><i class='fa fa-house'>&nbsp&nbsp&nbsp</i>Home</a></li>
+                    <li class="menu-link"><a href="./all-books.html"><i class='fa fa-book-open'>&nbsp&nbsp&nbsp</i>Books</a></li>
+                    <li  class="menu-link link-to-submenu"  id="active-link">
+                        <a href="#"><i class='fa fa-dog'>&nbsp&nbsp&nbsp</i>Breeds</a>
+                        <i class='fa fa-chevron-right menu-arrow'></i>
+                        <ul class="sub-menu">
+                            <li class="sub-menu-link"><a href="./your-puppy.html">All Puppies</a></li>
+                            <li class="sub-menu-link"><a href="./beagle.html">Beagle</a></li>
+                            <li class="sub-menu-link"><a href="./cavalier-king.html">Cavalier King Charles</a></li>
+                            <li class="sub-menu-link"><a href="./cavapoo.html">Cavapoo</a></li>
+                            <li class="sub-menu-link"><a href="./chihuahua.html">Chihuahua</a></li>
+                            <li class="sub-menu-link"><a href="./cockapoo.html">Cockapoo</a></li>
+                            <li class="sub-menu-link"><a href="./cocker-spaniel.html">Cocker Spaniel</a></li>
+                            <li class="sub-menu-link"><a href="./dachshund.html">Dachshund</a></li>
+                            <li class="sub-menu-link"><a href="./german-shepherd.html">German Shepherd</a></li>
+                            <li class="sub-menu-link"><a href="./golden-retriever.html">Golden Retriever</a></li>
+                            <li class="sub-menu-link"><a href="./jack-russell.html">Jack Russell</a></li>
+                            <li class="sub-menu-link"><a href="./labrador.html">Labrador Retriever</a></li>
+                            <li class="sub-menu-link"><a href="./staffie.html">Staffie (Staffordshire Bull)</a></li>
+                            <li class="sub-menu-link"><a href="./yorkie.html">Yorkie (Yorkshire Terrier)</a></li>
+                        </ul>
+                    </li>
+                <li class="menu-link"><a href="./about.html"><i class='fa fa-circle-info'>&nbsp&nbsp&nbsp</i>About</a></li>
+                <li class="menu-link"><a href="#" id="openModalLink"><i class='fa fa-envelope'>&nbsp&nbsp&nbsp</i>Contact</a></li>
                 </ul>
-              </li>
-              <li class="topnav"><a class="fa-about" href="./about.html">About</a></li>
-              <li class="topnav"><a class="fa-contact" href="#" id="openModalLink">Contact</a></li>
-            </ul>
-          </div>
+            </div>
         </div>
     </nav>
 
-    <!-- Modal contact form / same one is also used for look-inside -->
-    <div id="myModal" class="modal">
+    <!-- Modal contact form -->
+    <div id="myModal" class="modal" style="display: none;">
         <div class="modal-content" id="modalContent">
             <span class="close" id="closeModal">&times;</span>
             <div id="htmlContent"></div>
@@ -84,7 +84,7 @@
         <!-- top container with text -->
     <div id="book-top">
         <div id="book-lft-rw">
-            <h1>you and your BEAGLE PUPPY in a nutshell</span></h1>
+            <h1>you and your BEAGLE PUPPY in a nutshell</h1>
             <h2>The essential owners' guide to perfect puppy parenting - with easy-to-follow steps on how to choose and care for your new arrival</h2>
             <h3>Part of the Series: You and Your Puppy in a Nutshell</h3>
             <p>The perfect handbook for Beagle puppy parents-to-be! A compact summary of the latest findings in puppy care and behaviour, this book walks you step by step through the process - from deciding whether a Beagle is right for you, to the first crucial days, weeks and months.</p>
@@ -105,8 +105,8 @@
                     <img class="lazy" src="./assets/images/book-covers/Beagle-cov-web-rgb-2.avif" alt="Beagle Puppy book cover">
                 </div>
                 <p>Available on Amazon</p>
-                <a id="book-buy-btn" href="https://www.amazon.co.uk/Your-Beagle-Puppy-easy-follow-ebook/dp/B09LZ49GJX" target="_blank" nofollow>Buy eBook</a>
-                <a id="book-buy-btn" href="https://www.amazon.co.uk/Your-Beagle-Puppy-easy-follow/dp/1838474838/" target="_blank" nofollow>Buy Paperback</a>
+                <a class="book-buy-btn" href="https://www.amazon.co.uk/Your-Beagle-Puppy-easy-follow-ebook/dp/B09LZ49GJX" target="_blank" nofollow>Buy eBook</a>
+                <a class="book-buy-btn" href="https://www.amazon.co.uk/Your-Beagle-Puppy-easy-follow/dp/1838474838/" target="_blank" nofollow>Buy Paperback</a>
             </div>
             <div class="testimonial">
                 <blockquote>Genuinely interesting and helpful, thank you</blockquote>

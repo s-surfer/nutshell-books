@@ -10,7 +10,7 @@
   
     h1 {
       font-size: 24px;
-      line-height: 1;
+      line-height: 1.5;
     }
     h2 {
       font-size: 18px;
@@ -28,6 +28,7 @@
   width: 200px;
   min-width: 160px;
   > div {
+    margin: 10px auto;
     height: 300px;
     width: 200px;
   }
@@ -59,21 +60,22 @@
 }
 
 #book-rgt-rw {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
   align-content: center;
   max-width: 350px;
   min-width: 200px;
   margin: 0 20px 0 10px;
 }
   
-#book-buy-btn, #openLookInside  {
-  /* margin-top:10px; */
+.book-buy-btn, #openLookInside  {
   margin-bottom: 10px;
   background-color: saddlebrown;
   border: 2px solid #fff9c4;
-  border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
-  /* box-shadow: 0 4px 15px rgba(255, 87, 34, 0.5);  */
   box-sizing: border-box;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   color: #fefefe;
   cursor: pointer;
   font-size: 16px;
@@ -91,7 +93,7 @@
   touch-action: manipulation;
 }
 
-#book-buy-btn:hover, #openLookInside:hover {
+.book-buy-btn:hover, #openLookInside:hover {
   box-shadow: rgba(0, 0, 0, .25) 0 3px 9px 0;
   background-color: green;
   transform: translateY(-2px);

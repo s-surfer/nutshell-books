@@ -34,50 +34,52 @@
 
     <nav>
         <div class="navbar">
-          <i class='fa fa-bars'> <div>Menu</div></i>
-          <div class="logo"><a href="./"><img class="nutshell-logo" src="./assets/images/nutshell-logo-2.avif" alt="Nutshell Logo"></a></div>
-          <div class="nav-links">
-            <div class="sidebar-logo">
-              <span class="logo-name"><img class="nutshell-logo" src="./assets/images/nutshell-logo-2.avif" alt="Nutshell Logo"></span>
-              <i class='fa fa-close' ></i>
+            <i class='fa fa-bars'> <div>Menu</div></i>
+            <div class="logo">
+                <a href="./"><img class="nutshell-logo" src="./assets/images/nutshell-logo-2.avif" alt="Nutshell Logo"></a>
             </div>
-            <ul class="links">
-                <li class="topnav"><a class="fa-house" href="./">Home</a></li>
-                <li class="topnav"  id="active-link"><a class="fa-books" href="./all-books.html">Books</a></li>
-                <li  class="topnav">
-                <a class="submenu-link fa-breeds" href="#">Breeds</a>
-                <i class='fa fa-chevron-right htmlcss-arrow arrow' style="font-size:14px"></i>
-                <ul class="htmlCss-sub-menu sub-menu">
-                    <li><a href="./your-puppy.html">All Puppies</a></li>
-                    <li><a href="./beagle.html">Beagle</a></li>
-                    <li><a href="./cavalier-king.html">Cavalier King Charles</a></li>
-                    <li><a href="./cavapoo.html">Cavapoo</a></li>
-                    <li><a href="./chihuahua.html">Chihuahua</a></li>
-                    <li><a href="./cockapoo.html">Cockapoo</a></li>
-                    <li><a href="./cocker-spaniel.html">Cocker Spaniel</a></li>
-                    <li><a href="./dachshund.html">Dachshund</a></li>
-                    <li><a href="./german-shepherd.html">German Shepherd</a></li>
-                    <li><a href="./golden-retriever.html">Golden Retriever</a></li>
-                    <li><a href="./jack-russell.html">Jack Russell</a></li>
-                    <li><a href="./labrador.html">Labrador Retriever</a></li>
-                    <li><a href="./staffie.html">Staffie (Staffordshire Bull)</a></li>
-                    <li><a href="./yorkie.html">Yorkie (Yorkshire Terrier)</a></li>
+            <div class="nav-links">
+                <div class="sidebar-logo">
+                    <span class="logo-name"><img class="nutshell-logo" src="./assets/images/nutshell-logo-2.avif" alt="Nutshell Logo"></span>
+                    <i class='fa fa-close' ></i>
+                </div>
+                <ul class="menu">
+                    <li class="menu-link"><a href="./"><i class='fa fa-house'>&nbsp&nbsp&nbsp</i>Home</a></li>
+                    <li class="menu-link" id="active-link"><a href="./all-books.html"><i class='fa fa-book-open'>&nbsp&nbsp&nbsp</i>Books</a></li>
+                    <li  class="menu-link link-to-submenu">
+                        <a href="#"><i class='fa fa-dog'>&nbsp&nbsp&nbsp</i>Breeds</a>
+                        <i class='fa fa-chevron-right menu-arrow'></i>
+                        <ul class="sub-menu">
+                            <li class="sub-menu-link"><a href="./your-puppy.html">All Puppies</a></li>
+                            <li class="sub-menu-link"><a href="./beagle.html">Beagle</a></li>
+                            <li class="sub-menu-link"><a href="./cavalier-king.html">Cavalier King Charles</a></li>
+                            <li class="sub-menu-link"><a href="./cavapoo.html">Cavapoo</a></li>
+                            <li class="sub-menu-link"><a href="./chihuahua.html">Chihuahua</a></li>
+                            <li class="sub-menu-link"><a href="./cockapoo.html">Cockapoo</a></li>
+                            <li class="sub-menu-link"><a href="./cocker-spaniel.html">Cocker Spaniel</a></li>
+                            <li class="sub-menu-link"><a href="./dachshund.html">Dachshund</a></li>
+                            <li class="sub-menu-link"><a href="./german-shepherd.html">German Shepherd</a></li>
+                            <li class="sub-menu-link"><a href="./golden-retriever.html">Golden Retriever</a></li>
+                            <li class="sub-menu-link"><a href="./jack-russell.html">Jack Russell</a></li>
+                            <li class="sub-menu-link"><a href="./labrador.html">Labrador Retriever</a></li>
+                            <li class="sub-menu-link"><a href="./staffie.html">Staffie (Staffordshire Bull)</a></li>
+                            <li class="sub-menu-link"><a href="./yorkie.html">Yorkie (Yorkshire Terrier)</a></li>
+                        </ul>
+                    </li>
+                <li class="menu-link"><a href="./about.html"><i class='fa fa-circle-info'>&nbsp&nbsp&nbsp</i>About</a></li>
+                <li class="menu-link"><a href="#" id="openModalLink"><i class='fa fa-envelope'>&nbsp&nbsp&nbsp</i>Contact</a></li>
                 </ul>
-              </li>
-              <li class="topnav"><a class="fa-about" href="./about.html">About</a></li>
-              <li class="topnav"><a class="fa-contact" href="#" id="openModalLink">Contact</a></li>
-            </ul>
-          </div>
+            </div>
         </div>
     </nav>
 
-    <!-- Modal contact form -->
-    <div id="myModal" class="modal">
-        <div class="modal-content" id="modalContent">
-            <span class="close" id="closeModal">&times;</span>
-            <div id="htmlContent"></div>
-        </div>
+   <!-- Modal contact form -->
+   <div id="myModal" class="modal" style="display: none;">
+    <div class="modal-content" id="modalContent">
+        <span class="close" id="closeModal">&times;</span>
+        <div id="htmlContent"></div>
     </div>
+</div>
     
     <!-- top section with intro text and puppies book -->
     <div id=books-top-ctn>

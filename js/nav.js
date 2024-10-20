@@ -18,9 +18,9 @@ navLinks.style.left = "-120%";
 }
 
 // sidebar submenu open close js code
-let htmlcssArrow = document.querySelector(".htmlcss-arrow, .submenu-link");
-htmlcssArrow.onclick = function() {
- navLinks.classList.toggle("show1");
+let arrow = document.querySelector(".menu-arrow, .link-to-submenu");
+arrow.onclick = function() {
+  navLinks.classList.toggle("show1");
 }
 
 //////////////////// modal contact window code //////////////////
@@ -50,7 +50,7 @@ function openModal(modalform, breed) {
             // change top and height for look inside
             const modalDiv = document.getElementById("modalContent");
             if (breed !== "") {
-              modalDiv.style.setProperty("top","45%");
+              modalDiv.style.setProperty("top","520px");
               modalDiv.style.setProperty("left","50%");
               modalDiv.style.setProperty("padding","10px auto");
               

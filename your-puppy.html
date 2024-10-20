@@ -36,62 +36,63 @@
 
     <nav>
         <div class="navbar">
-          <i class='fa fa-bars'> <div>Menu</div></i>
-          <div class="logo"><a href="./"><img id="nutshell-logo" src="./assets/images/nutshell-logo-2.avif" alt="Nutshell Logo"></a></div>
-          <div class="nav-links">
-            <div class="sidebar-logo">
-              <span class="logo-name"><img id="nutshell-logo" src="./assets/images/nutshell-logo-2.avif" alt="Nutshell Logo"></span>
-              <i class='fa fa-close' ></i>
+            <i class='fa fa-bars'> <div>Menu</div></i>
+            <div class="logo">
+                <a href="./"><img class="nutshell-logo" src="./assets/images/nutshell-logo-2.avif" alt="Nutshell Logo"></a>
             </div>
-            <ul class="links">
-                <li class="topnav"><a class="fa-house" href="./">Home</a></li>
-                <li class="topnav"><a class="fa-books" href="./all-books.html">Books</a></li>
-                <li  class="topnav" id="active-link">
-                <a class="submenu-link fa-breeds" href="#">Breeds</a>
-                <i class='fa fa-chevron-right htmlcss-arrow arrow' style="font-size:14px"></i>
-                <ul class="htmlCss-sub-menu sub-menu">
-                    <li><a href="./your-puppy.html">All Puppies</a></li>
-                    <li><a href="./beagle.html">Beagle</a></li>
-                    <li><a href="./cavalier-king.html">Cavalier King Charles</a></li>
-                    <li><a href="./cavapoo.html">Cavapoo</a></li>
-                    <li><a href="./chihuahua.html">Chihuahua</a></li>
-                    <li><a href="./cockapoo.html">Cockapoo</a></li>
-                    <li><a href="./cocker-spaniel.html">Cocker Spaniel</a></li>
-                    <li><a href="./dachshund.html">Dachshund</a></li>
-                    <li><a href="./german-shepherd.html">German Shepherd</a></li>
-                    <li><a href="./golden-retriever.html">Golden Retriever</a></li>
-                    <li><a href="./jack-russell.html">Jack Russell</a></li>
-                    <li><a href="./labrador.html">Labrador Retriever</a></li>
-                    <li><a href="./staffie.html">Staffie (Staffordshire Bull)</a></li>
-                    <li><a href="./yorkie.html">Yorkie (Yorkshire Terrier)</a></li>
+            <div class="nav-links">
+                <div class="sidebar-logo">
+                    <span class="logo-name"><img class="nutshell-logo" src="./assets/images/nutshell-logo-2.avif" alt="Nutshell Logo"></span>
+                    <i class='fa fa-close' ></i>
+                </div>
+                <ul class="menu">
+                    <li class="menu-link"><a href="./"><i class='fa fa-house'>&nbsp&nbsp&nbsp</i>Home</a></li>
+                    <li class="menu-link"><a href="./all-books.html"><i class='fa fa-book-open'>&nbsp&nbsp&nbsp</i>Books</a></li>
+                    <li  class="menu-link link-to-submenu"  id="active-link">
+                        <a href="#"><i class='fa fa-dog'>&nbsp&nbsp&nbsp</i>Breeds</a>
+                        <i class='fa fa-chevron-right menu-arrow'></i>
+                        <ul class="sub-menu">
+                            <li class="sub-menu-link"><a href="./your-puppy.html">All Puppies</a></li>
+                            <li class="sub-menu-link"><a href="./beagle.html">Beagle</a></li>
+                            <li class="sub-menu-link"><a href="./cavalier-king.html">Cavalier King Charles</a></li>
+                            <li class="sub-menu-link"><a href="./cavapoo.html">Cavapoo</a></li>
+                            <li class="sub-menu-link"><a href="./chihuahua.html">Chihuahua</a></li>
+                            <li class="sub-menu-link"><a href="./cockapoo.html">Cockapoo</a></li>
+                            <li class="sub-menu-link"><a href="./cocker-spaniel.html">Cocker Spaniel</a></li>
+                            <li class="sub-menu-link"><a href="./dachshund.html">Dachshund</a></li>
+                            <li class="sub-menu-link"><a href="./german-shepherd.html">German Shepherd</a></li>
+                            <li class="sub-menu-link"><a href="./golden-retriever.html">Golden Retriever</a></li>
+                            <li class="sub-menu-link"><a href="./jack-russell.html">Jack Russell</a></li>
+                            <li class="sub-menu-link"><a href="./labrador.html">Labrador Retriever</a></li>
+                            <li class="sub-menu-link"><a href="./staffie.html">Staffie (Staffordshire Bull)</a></li>
+                            <li class="sub-menu-link"><a href="./yorkie.html">Yorkie (Yorkshire Terrier)</a></li>
+                        </ul>
+                    </li>
+                <li class="menu-link"><a href="./about.html"><i class='fa fa-circle-info'>&nbsp&nbsp&nbsp</i>About</a></li>
+                <li class="menu-link"><a href="#" id="openModalLink"><i class='fa fa-envelope'>&nbsp&nbsp&nbsp</i>Contact</a></li>
                 </ul>
-              </li>
-              <li class="topnav"><a class="fa-about" href="./about.html">About</a></li>
-              <li class="topnav"><a class="fa-contact" href="#" id="openModalLink">Contact</a></li>
-            </ul>
-          </div>
+            </div>
         </div>
     </nav>
 
-    <!-- Modal contact form -->
-    <div id="myModal" class="modal">
-        <div class="modal-content" id="modalContent">
-            <span class="close" id="closeModal">&times;</span>
-            <div id="htmlContent"></div>
-        </div>
-    </div>    
+   <!-- Modal contact form -->
+   <div id="myModal" class="modal" style="display: none;">
+    <div class="modal-content" id="modalContent">
+        <span class="close" id="closeModal">&times;</span>
+        <div id="htmlContent"></div>
+    </div>
+</div> 
     
     <!-- top container with text -->
     <div id="book-top">
+        
         <div id="book-lft-rw">
-            <button id="openLookInside" breed="your-puppy">look inside</button>
-            <div>
-                <img src="./assets/images/book-covers/book-puppy-194x300.avif" alt="Puppy book cover" loading="lazy">
-            </div>  
-            <a id="book-buy-btn" href="https://www.amazon.co.uk/dp/191618975X" target="_blank">BUY</a>
-        </div>
-        <div id="book-ctr-rw">
-            <h1>ALL TYPES OF PUPPIES <br/> <span class="nutshell-txt">in a nutshell</span></h1>
+            <h1>you and your PUPPY in a nutshell</h1>
+            <h2>The essential owners' guide to perfect puppy parenting - with easy-to-follow steps on how to choose and care for your new arrival</h2>
+            <h3>Part of the Series: You and Your Puppy in a Nutshell</h3>
+            <p>A compact summary of the latest findings in puppy care and behaviour, this guide will help you be the best puppy parent you can possibly be, and get your special relationship off to a wonder-filled start.</p>
+            <p>With easy-to-read, easy-to-follow advice, it walks you step by step from deciding whether a puppy is right for you, to the daunting first days and weeks, and through the first crucial months. Its amusing DOs and DON'Ts of puppy care will keep you smiling through the poops, night-time whimpers and shredded items of personal value.</p>
+            <h3>About the book</h3>
             <p><span class="fst-italic">You and Your Puppy in a Nutshell</span> covers pure breeds, cross breeds and mixed breeds alike. This is the best choice for you if you are:</p>
             <ul>
                 <li>considering dog ownership in principle,</li>
@@ -100,6 +101,15 @@
             <p>It is a compact summary of the latest findings in puppy care and behaviour that guides you step by step through the process – from choosing your puppy and preparing for the homecoming, to those first exciting and sometimes overwhelming days, and through the crucial early weeks and months when your puppy is growing and learning at its fastest.</p>
         </div>
         <div id="book-rgt-rw">
+            <div id="book-cover">
+                <button id="openLookInside" breed="your-puppy">look inside</button>
+                <div>
+                    <img class="lazy" src="./assets/images/book-covers/book-puppy-194x300.avif" alt="Puppy book cover" loading="lazy">
+                </div>  
+                <p>Available on Amazon</p>
+                <a id="book-buy-btn" href="https://www.amazon.co.uk/Your-Puppy-Nutshell-easy-follow-ebook/dp/B08946NNNH" target="_blank" nofollow>Buy eBook</a>
+                <a id="book-buy-btn" href="https://www.amazon.co.uk/dp/191618975X" target="_blank" nofollow>Buy Paperback</a>
+            </div>
             <div class="testimonial">
                 <blockquote>Detailed but not over complicated, this book explains clearly what you are ‘in for’ … and then helps with the practicalities. Thank you</blockquote>
             </div>
@@ -117,7 +127,7 @@
         <div class="sliders">
             <div class="slider-deck">
                 <div class="slider-card">
-                    <img class="slider-img" src="./assets/images/your-puppy/Gen1-web.avif" class="card-img" alt="Two puppies play-fighting">
+                    <img class="slider-img lazy" src="./assets/images/your-puppy/Gen1-web.avif" class="card-img" alt="Two puppies play-fighting">
                 </div>
                 <div class="slider-card">
                     <img class="slider-img" loading="lazy" src="./assets/images/your-puppy/Gen4-web.avif" class="card-img" alt="Puppy chasing a ball">
@@ -125,7 +135,7 @@
             </div>
             <div class="slider-deck">
                 <div class="slider-card">
-                    <img class="slider-img" src="./assets/images/your-puppy/Gen2-web.avif" class="card-img" alt="Man cuddling puppy on his shoulder">
+                    <img class="slider-img lazy" src="./assets/images/your-puppy/Gen2-web.avif" class="card-img" alt="Man cuddling puppy on his shoulder">
                 </div>
                 <div class="slider-card">
                     <img class="slider-img" loading="lazy" src="./assets/images/your-puppy/Gen5-web.avif" class="card-img" alt="Puppy asleep while being cuddled">
@@ -133,7 +143,7 @@
             </div>
             <div class="slider-deck">
                 <div class="slider-card">
-                    <img class="slider-img" src="./assets/images/your-puppy/Gen3-web.avif" class="card-img" alt="Puppy being given a treat">
+                    <img class="slider-img lazy" src="./assets/images/your-puppy/Gen3-web.avif" class="card-img" alt="Puppy being given a treat">
                 </div>
                 <div class="slider-card">
                     <img class="slider-img" loading="lazy" src="./assets/images/your-puppy/Gen6-web.avif" class="card-img" alt="Puppy running">
@@ -143,47 +153,72 @@
     </sliders>
    
 
-    <!-- footer -->
-    <footer>
+     <!-- footer -->
+     <footer>
         <footer-section>
             
             <div id="footer-left" class="footer-ctn">
-                <div>
-                    <p class="footer-header">Contact</p>
-                    <address>
-                        <span>Nutshell Books Ltd.</span>
-                        <span>Publisher</span>
-                        <span>+44 (0) 7908 768 413</span>
-                        <span><a href="mailto:info@nutshell-books.com">info@nutshell-books.com</a></span>
-                    </address>
+                <div id="footer-logo">
+                    <a href="./"><img class="nutshell-logo" src="./assets/images/nutshell-logo-3.avif" alt="Nutshell Logo"/></a>
                 </div>
+                <address>
+                    <p><span class="fa fa-phone">&nbsp&nbsp&nbsp</span>+44 (0) 7908 768 413</p>
+                    <p><span class="fa fa-envelope">&nbsp&nbsp&nbsp</span><a href="mailto:info@nutshell-books.com">info@nutshell-books.com</a></p>
+                </address>
             </div>
             <div id="footer-center" class="footer-ctn">
-                <div>
-                    <p class="footer-header">Current Best Sellers</p>
-                    <p>Copies of all Nutshell Books are held by the British Library and other UK legal deposit libraries</p>
-                    <ol class="bestsellers">
-                        <li><a href="./cocker-spaniel.html">Cocker Spaniel</a></li>
-                        <li><a href="./jack-russell.html">Jack Russell</a></li>
-                        <li><a href="./dachshund.html">Dachshund</a></li>
-                    </ol>
+                <div class="inner-ctn">
+                    <h4 class="footer-header">Other books in the series:<br />You and Your Puppy in a Nutshell</h4>
+                    <div class="book-lists">
+                        <div>
+                            <ul class="footer-list">
+                                <li><a href="./beagle.html">Beagle</a></li>
+                                <li><a href="./cavalier-king.html">Cavalier King Charles</a></li>
+                                <li><a href="./cavapoo.html">Cavapoo</a></li>
+                                <li><a href="./chihuahua.html">Chihuahua</a></li>
+                                <li><a href="./cockapoo.html">Cockapoo</a></li>
+                                <li><a href="./cocker-spaniel.html">Cocker Spaniel</a></li>
+                                <li><a href="./dachshund.html">Dachshund</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="footer-list">
+                                <li><a href="./german-shepherd.html">German Shepherd</a></li>
+                                <li><a href="./golden-retriever.html">Golden Retriever</a></li>
+                                <li><a href="./jack-russell.html">Jack Russell</a></li>
+                                <li><a href="./labrador.html">Labrador</a></li>
+                                <li><a href="./staffie.html">Staffie</a></li>
+                                <li><a href="./yorkie.html">Yorkie</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="footer-right" class="footer-ctn">
-                <div>
-                    <p class="footer-header">MISCELLANEOUS</p>
-                    <ul class="miscellaneous">
-                        <li><a href="./privacy.html">Privacy Policy</a></li>
-                    </ul>
+                <div class="inner-ctn">
+                     <h4 class="footer-header">Explore</h4>
+                     <ul class="footer-list">
+                         <li><a href="./">Home</a></li>
+                         <li><a href="./all-books.html">Books</a></li>
+                         <li><a href="./about.html">About</a></li>
+                         <li><a href="#" id="openModalLink">Contact</a></li>
+                     </ul>
                 </div>
-            </div>
-
+             </div>
         </footer-section>
 
-        <div class="copyright">
-            <span>
-                © <span id="year-span">xxxx</span> Nutshell Books
-            </span>
+        <div class="copyright-wrapper">
+            <div class="copyright-lft footer-ctn">
+                Copyright © <span id="year-span">xxxx</span> Nutshell Books - 12041821
+            </div>
+            <div class="copyright-center footer-ctn">
+                Website Design, Build & Content Creation by <a href="./">GEEKS</a>
+            </div>
+            <div class="copyright-rgt footer-ctn">
+                <a href="./privacy.html">Privacy Policy</a><span>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp</span>
+                <a href="./cookie.html">Cookie Policy</a><span>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp</span>
+                <a href="./sitemap.html">Sitemap</a>
+            </div>
         </div>
 
     </footer>   

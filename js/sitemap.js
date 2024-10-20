@@ -1,4 +1,17 @@
- 
+
+async function fetchSitemap() {
+    fetch("./sitemap.xml")
+        .then(response => response.text())
+        .then(data => {
+            displayStyledXML(data);
+        })
+        .catch(error => {
+            document.getElementById('xmlOutput').textContent = 'Error loading XML';
+            console.error('Error:', error);
+        });
+
+}
+
  // Function to parse XML and convert to styled HTML
  function displayStyledXML(xmlString) {
     
@@ -43,3 +56,5 @@
     document.getElementById('xmlOutput').innerHTML = innerHTML;
     return;
 }
+
+fetchSitemap();

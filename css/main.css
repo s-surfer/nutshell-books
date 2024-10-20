@@ -71,7 +71,7 @@ p, li, blockquote {
   --submenu-font-size: 1.1rem;
   --max-sidebar-width: 300px;
   --sidebar-ident: 15px;
-  --img-ratio: 1.47;
+  --img-ratio: 1.5;
   --modal-background-color: #fff9c4; /*#fffde7;*/
 }
 
@@ -87,11 +87,7 @@ p, li, blockquote {
   width: 100%;
 }
 
-#active-link > a {
-  font-weight: 600;
-}
-
-nav{
+nav {
   position: relative;
   margin-top: 10px;
   display: block;
@@ -104,11 +100,7 @@ nav{
   z-index:99;
 }
 
-.links {
-  padding: 0;
-}
-
-nav .navbar{
+.navbar {
   height: 100%;
   max-width: var(--navbar-width);
   color: blue;
@@ -116,32 +108,42 @@ nav .navbar{
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  /* padding: 0 20px; */
 }
 
-nav .navbar .nav-links{
+.nav-links{
   display: flex;
   flex-direction: column;
   justify-content: center;
   line-height: var(--nav-links-line-height);
 }
 
-nav .navbar .links{
+.menu {
   display: flex;
+  padding: 0;
 }
 
 /* top menu bar */
-nav .navbar .links li{ 
+.menu-link, .sub-menu-link { 
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   list-style: none;
+  width: 100%;
 }
 
-nav .navbar .links li a {
+#active-link > a {
+  font-weight: 600;
+}
+
+.fa-house, .fa-dog, .fa-book-open, .fa-circle-info, .fa-envelope {
+  display: none !important;
+}
+
+.menu-link > a,
+.sub-menu-link > a {
   line-height: var(--nav-links-line-height);
-  width:100%;
+  width: 100%;
   text-decoration: none;
   white-space: nowrap;
   color: var(--navbar-color);
@@ -154,13 +156,11 @@ nav .navbar .links li a {
   }
 }
 
-/* hover over down arrow */
-.links li:hover .htmlcss-arrow,
-.links li:hover .js-arrow{
+.menu-link:hover .menu-arrow {
   transform: rotate(90deg);
 } 
 
-nav .navbar .links li .arrow{
+.menu-link .menu-arrow {
   width: 20px;
   line-height: var(--nav-links-line-height);
   text-align: center;
@@ -169,8 +169,8 @@ nav .navbar .links li .arrow{
   transition: all 0.3s ease;
 }
 
-/* dropdown / submenu / from top nav*/
-nav .navbar .links li .sub-menu{
+/*********  prepared & hidden ********/
+.sub-menu {
   position: absolute;
   top: var(--top-nav-links-line-height);
   left: 0px;
@@ -179,105 +179,68 @@ nav .navbar .links li .sub-menu{
   background: var(--submenu-background);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 7px;
-  display: none;
+  display: none;        
   z-index: 2;
-  a {
-    padding: 0 10px;
-  }
 }
 
-nav .navbar .links li:hover .htmlCss-sub-menu,
-nav .navbar .links li:hover .js-sub-menu{
+/***** shows the submenu *******/
+.menu-link:hover .sub-menu {
   display: block;
 }
 
-.navbar .links li .sub-menu a{
+.sub-menu-link > a {
+  padding: 0 10px;
   color: var(--submenu-color);
   font-size: var(--submenu-font-size);
   font-weight: 500;
 }
-.navbar .links li .sub-menu .more-arrow{
-  line-height: 40px;
-}
 
-.navbar .links li .sub-menu .more-sub-menu{
-  position: absolute;
-  top: 0;
-  left: 100%;
-  border-radius: 0 4px 4px 4px;
-  z-index: 1;
+.sidebar-logo{
   display: none;
 }
 
-/* submenu shown when hover over MORE */
-.links li .sub-menu .more:hover .more-sub-menu{
-  display: block;
-}
-
-.navbar .nav-links .sidebar-logo{
-  display: none;
-}
 .navbar .fa-bars {
   display: none;
 }
 
+/* reduce size of text in menu */
 @media (max-width:1000px) {
   
-  nav .navbar .links li{
+  .menu-link {
     padding: 0;
     white-space: nowrap;
-  }
+   }
   
-  /* text in submenu / sidemenu on left hand side of screen */
-  nav .navbar .links li a{
-    font-size: var(--navbar-links-smaller-font-size);
-    font-weight: 500;
-  }
-  
-  nav .navbar .links li .sub-menu a{
+  .menu-link > a,
+  .sub-menu-link > a {
     font-size: var(--navbar-links-smaller-font-size);
   }
 }
 
-/* submenu at top menu when screen smaller */
-@media (min-width: 800px) and (max-width:1000px) {
-
-  nav .navbar .links li .sub-menu a {
-    font-size: var(--navbar-links-smaller-font-size);
-  }
-
-}
-
-/* repositions submenu when no sidebar visible */
+/* Main MENU when no sidebar visible */
 @media (min-width:800px){
-  .links li .sub-menu .more:hover .more-sub-menu{
-    display: block;
-    top: -15px;
-  }
-  .more:hover .htmlcss-more-arrow,
-  .more:hover .js-arrow {
-  transform: rotate(180deg);
-  } 
-
+  
   .nav-links {
-    margin-right: 30px !important;
+    margin-right: 30px;
   }
 
-  .topnav {
+  .menu-link {
     padding: 0;
     margin: 0 15px;
   }
   
-
-  .links > li > a {
-    line-height: var(--top-nav-links-line-height) !important;
+  .menu-link > a, 
+  .menu-link > .menu-arrow {
+    line-height: var(--top-nav-links-line-height);
   }
 
-  nav .navbar .links li .arrow{
-    line-height: var(--top-nav-links-line-height) !important;
+  /* hides icons on main page menu */
+  .fa-house, .fa-dog, .fa-book-open, .fa-circle-info, .fa-envelope {
+    display: none !important;
   }
 
-  .topnav > a::before {
+  /******* displays a line under menu item *********/
+  .menu-link > a::before {
     content: '';
     position: absolute;
     width: 0%;
@@ -287,25 +250,27 @@ nav .navbar .links li:hover .js-sub-menu{
     left: 100%;
     transition: all 0.2s ease-in-out;
   }
-  .topnav > a:hover::before {
+  
+  .menu-link > a:hover::before {
     width:100%;
     left:0;
   }
 
-  .topnav > a:hover {
+  .menu-link > a:hover {
     background: none !important;
     font-weight: 600;
   }
+  /************************************************/
 }
 
-
+/***************** main menu  ****************/
 @media (max-width:800px){
   
   nav {
     height: 70px;
   }
 
-  .navbar .fa-bars{
+  .navbar > .fa-bars{
     display: block;
     position: relative;
     &:before {
@@ -320,7 +285,7 @@ nav .navbar .links li:hover .js-sub-menu{
   }
 
   /* left -100% hides the sidebar */
-  nav .navbar .nav-links{
+  .nav-links {
     position: fixed;
     top: 0;
     left: -120%;
@@ -333,17 +298,33 @@ nav .navbar .links li:hover .js-sub-menu{
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     transition: all 0.5s ease;
     z-index: 100;
-    
-    
   }
-  nav .navbar .nav-links .sub-menu{
+
+  .sub-menu {
     /* scroll bar */
     max-height: 250px;
     overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  /* Scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+  .sub-menu::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+  }
+  
+  .sub-menu::-webkit-scrollbar-track {
+    background: transparent; /* Background of the scrollbar track */
+  }
+  
+  .sub-menu::-webkit-scrollbar-thumb {
+    background-color: saddlebrown; 
+    border-radius: 10px; 
+    border: 2px solid transparent;
+    background-clip: padding-box; 
   }
  
-  /* opened up sidemenu */
-  .navbar .nav-links .sidebar-logo{
+  /* opens up sidemenu */
+  .sidebar-logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -354,7 +335,7 @@ nav .navbar .links li:hover .js-sub-menu{
   }
   
   .sidebar-logo  i,
-  .navbar .fa-bars {
+  .navbar > .fa-bars {
     display: flex;
     flex-direction:row;
     align-items: center;
@@ -391,153 +372,70 @@ nav .navbar .links li:hover .js-sub-menu{
     }
   }
 
-  /* remove padding from top and bottom for sidebar submenu */
-  nav .navbar .links li .sub-menu{
-    padding: 0;
-  }
-
-  .navbar .links li a {
-    display: inline-block;
-  } 
-
-  /* indent sidebar menu */
-  .navbar .links li .sub-menu li{
-    padding: 0 var(--sidebar-ident);
-  }
-
-  /* this would be padding for the sidebar menu links */
-
-  nav .navbar .links{
+  .menu {
       display: block;
       margin-top: 10px;
     }
-  nav .navbar .links li .arrow{
+
+  .menu-link > .menu-arrow{
     line-height: var(--nav-links-line-height);
     position: relative;
     left:-45px;
   }
 
-  nav .navbar .links li{
-      display: block;
-    }
-  nav .navbar .links li .sub-menu{
+  .menu-link {
+    display: block;
+  }
+
+  .menu-link a {
+    display: inline-block;
+  } 
+
+  .sub-menu {
+    padding: 0;
     position: relative;
     top: 0;
     box-shadow: none;
     display: none;
   }
 
-  nav .navbar .links li .sub-menu li{
+  .sub-menu-link {
+    padding: 0 var(--sidebar-ident);
     border-bottom: none;
     a {
       padding-right: 0;
     }
   }
-  .navbar .links li .sub-menu .more-sub-menu{
-    display: none;
-    position: relative;
-    left: 0;
-  }
-  .navbar .links li .sub-menu .more-sub-menu li{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
 
-  .links li:hover .htmlcss-arrow,
-  .links li:hover .js-arrow{
+  .menu-link:hover .menu-arrow {
     transform: rotate(0deg);
   }
 
-  .navbar .links li .sub-menu .more-sub-menu{
+  .menu-link:hover .sub-menu {
     display: none;
-  }
-  /* this is the MORE on sidebar submenu */
-  .navbar .links li .sub-menu .more span{
-    display: flex;
-    align-items: center;
-  }
-
-  .links li .sub-menu .more:hover .more-sub-menu{
-    display: none;
-  }
-  nav .navbar .links li:hover .htmlCss-sub-menu,
-  nav .navbar .links li:hover .js-sub-menu{
-    display: none;
-  }
-  .navbar .nav-links.show1 .links .htmlCss-sub-menu,
-  .navbar .nav-links.show3 .links .js-sub-menu,
-  .navbar .nav-links.show2 .links .more .more-sub-menu{
-    display: block;
-  }
-  .navbar .nav-links.show1 .links .htmlcss-arrow,
-  .navbar .nav-links.show3 .links .js-arrow{
-    transform: rotate(90deg);
-  }
-  .navbar .nav-links.show2 .links .more-arrow{
-    transform: rotate(180deg);
-  }
-
-  /* icons shown in sidebar */
-  .fa-house {
-    position: relative;
-    &:before {
-      font-family: 'FontAwesome', sans-serif;
-      color: saddlebrown;  
-      content: '\f015';
-      margin: 0 15px 0 5px;
-      width: 10px;
-    }
-  }
-
-  .fa-books {
-    position: relative;
-    &:before {
-      font-family: 'FontAwesome', sans-serif;
-      color: saddlebrown;  
-      content: '\f518';
-      margin: 0 15px 0 5px;
-    }
-  }
-
-  .fa-about {
-    position: relative;
-    &:before {
-      font-family: 'FontAwesome', sans-serif;
-      color: saddlebrown;  
-      content: '\f05a';
-      margin: 0 15px 0 5px;
-    }
-  }
-
-  .fa-contact {
-    position: relative;
-    &:before {
-      font-family: 'FontAwesome', sans-serif;
-      color: saddlebrown;  
-      content: '\f003';
-      margin: 0 15px 0 5px;
-    }
-  }
-
-  .fa-breeds {
-    position: relative;
-    &:before {
-      font-family: 'FontAwesome', sans-serif;
-      color: saddlebrown;  
-      content: '\f6d3';
-      margin: 0 15px 0 5px;
-    }
   }
   
+  .nav-links.show1 .menu-link .sub-menu {
+    display: block;
+  }
+
+  .nav-links.show1 .menu-link .menu-arrow {
+    transform: rotate(90deg);
+  }
+  
+  .fa-house, .fa-dog, .fa-book-open, .fa-circle-info, .fa-envelope {
+    display: inline-block !important;
+    color: saddlebrown;
+    margin-left:5px !important;
+  }
 }
 
 @media (max-width:500px){
-  nav .navbar .nav-links{
+  .nav-links {
     max-width: 100vw;
   } 
 
-  nav .navbar .nav-links .sub-menu{
+  .sub-menu {
     max-width: 90vw;
   } 
 
@@ -545,8 +443,6 @@ nav .navbar .links li:hover .js-sub-menu{
    margin-right: 20px;
   }
 }
-
-
 
 /* -------------- Homepage Main rotating carousel - showing books ------------- */
  
@@ -634,7 +530,7 @@ nav .navbar .links li:hover .js-sub-menu{
 }
 
 .testimonial blockquote {
-  margin: 20px 10px;
+  margin: 10px 10px;
   padding: 10px 30px;
   position: relative;
   border: none;
@@ -667,7 +563,6 @@ nav .navbar .links li:hover .js-sub-menu{
   right: 10px;
   bottom: -0.5em;
 }
-
 
 /*======================== sliders at botton of home page and in each book page ============ */
 
@@ -819,6 +714,9 @@ address {
   opacity: 1;
   font-weight: 400;
   text-transform: none;
+  .fa-envelope {
+    color:rgb(249, 216, 53);
+  }
   a {
     text-transform: lowercase;
     color:#f9d835;
@@ -827,7 +725,6 @@ address {
     }
   }
 }
-
 
 #footer-center {
   display: flex;
@@ -882,7 +779,6 @@ address {
   }
 }
 
-
 .copyright-wrapper {
   max-width: 1280px;
   display: flex;
@@ -929,6 +825,5 @@ address {
   .footer-ctn {
     width: 60%;
   }
-  
-
+ 
 }
