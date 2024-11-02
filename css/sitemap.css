@@ -1,19 +1,17 @@
  /* General styles for XML content */
 .sitemap-content {
     margin: 20px auto 40px;
-}
+    h1 {
+        margin: 0 10px ;
+    }
+    p {
+        margin: 0;
+    }
 
-h1 {
-    margin: 0 10px ;
-}
-
-p {
-    margin: 0;
-}
-
-a {
-    color: saddlebrown;
-    font-weight: 500;
+    a {
+        color: saddlebrown;
+        font-weight: 500;
+    }
 }
 
 .xml-container {

@@ -1,4 +1,11 @@
 
+ /* message sent html */
+.icon-open-envelope {
+  font-size: 84px;
+  color: #4cd137;
+}
+
+
 /*********************** modal section for contact *******************/
 
 .modal {
@@ -87,14 +94,7 @@
     background-clip: padding-box; /* Ensures the background doesn't overflow the border */
   }
   
-  /* message sent html */
-  .fa-envelope-open-text {
-    font-size: 84px;
-    color: #4cd137;
-  }
-  
-  
-  @media (max-width: 1000px) {
+   @media (max-width: 1000px) {
     .modal-content {
       max-width: 60%;
     }

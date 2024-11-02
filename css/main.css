@@ -38,6 +38,7 @@ p, li, blockquote {
 
 .favcon {
   height: 25px;
+  vertical-align: middle;
 }
 
 @keyframes gradient-animation {
@@ -51,6 +52,58 @@ p, li, blockquote {
     background-position: 0% 50%;
   }
 }
+
+/* fonts created with figma and downloaded from icomoon */
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?d1rqro');
+  src:  url('../fonts/icomoon.eot?d1rqro#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?d1rqro') format('truetype'),
+    url('../fonts/icomoon.woff?d1rqro') format('woff'),
+    url('../fonts/icomoon.svg?d1rqro#icomoon') format('svg');
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  font-variant: normal;
+  text-transform: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bars:before {
+  content: "\e900";
+}
+.icon-book-open:before {
+  content: "\e901";
+}
+.icon-chevron-right:before {
+  content: "\e902";
+}
+.icon-close:before {
+  content: "\e903";
+}
+.icon-dog:before {
+  content: "\e904";
+}
+.icon-envelope:before {
+  content: "\e905";
+}
+.icon-home:before {
+  content: "\e906";
+}
+.icon-info:before {
+  content: "\e907";
+}
+.icon-phone:before {
+  content: "\e908";
+}
+.icon-open-envelope:before {
+  content: "\e909";
+}
+
 
 /* ---------------- navigation all pages --------------------------- */
 
@@ -136,8 +189,8 @@ nav {
   font-weight: 600;
 }
 
-.fa-house, .fa-dog, .fa-book-open, .fa-circle-info, .fa-envelope {
-  display: none !important;
+.icon-home, .icon-dog, .icon-book-open, .icon-info, .icon-envelope {
+  display: none;
 }
 
 .menu-link > a,
@@ -199,7 +252,7 @@ nav {
   display: none;
 }
 
-.navbar .fa-bars {
+.navbar .icon-bars {
   display: none;
 }
 
@@ -234,11 +287,6 @@ nav {
     line-height: var(--top-nav-links-line-height);
   }
 
-  /* hides icons on main page menu */
-  .fa-house, .fa-dog, .fa-book-open, .fa-circle-info, .fa-envelope {
-    display: none !important;
-  }
-
   /******* displays a line under menu item *********/
   .menu-link > a::before {
     content: '';
@@ -270,17 +318,16 @@ nav {
     height: 70px;
   }
 
-  .navbar > .fa-bars{
+  .navbar > .icon-bars{
     display: block;
     position: relative;
     &:before {
-      font-family: 'FontAwesome', sans-serif;
       color: saddlebrown;  
-      content: '\f0c9';  /* fa bar */
+      content: "\e900";
       top: 0;
       margin-right: 10px;
       width: 10px;
-      font-size: 1.5rem;
+      font-size: 1.75rem;
     }
   }
 
@@ -335,7 +382,7 @@ nav {
   }
   
   .sidebar-logo  i,
-  .navbar > .fa-bars {
+  .navbar > .icon-bars {
     display: flex;
     flex-direction:row;
     align-items: center;
@@ -358,17 +405,21 @@ nav {
   }
 
   .sidebar-logo  i,
-  .navbar .fa-close {
+  .navbar .icon-close {
     position: relative;
     margin-right: 10px;
     &:before {
-      font-family: 'FontAwesome', sans-serif;
       color: saddlebrown;  
-      content: '\f00d';   /* fa close */
+      content: "\e903";
       top: 0;
       font-size:30px;
       margin-right: 10px;
-      width: 10px;
+      padding: 1px;
+      border: 1px solid saddlebrown;
+      border-radius: 5px;
+    }
+    &:hover {
+      cursor: pointer;
     }
   }
 
@@ -380,7 +431,9 @@ nav {
   .menu-link > .menu-arrow{
     line-height: var(--nav-links-line-height);
     position: relative;
-    left:-45px;
+    left:-50px;
+    font-size: 18px;
+    font-weight: 600;
   }
 
   .menu-link {
@@ -423,11 +476,12 @@ nav {
     transform: rotate(90deg);
   }
   
-  .fa-house, .fa-dog, .fa-book-open, .fa-circle-info, .fa-envelope {
+  .icon-home, .icon-dog, .icon-book-open, .icon-info, .icon-envelope {
     display: inline-block !important;
     color: saddlebrown;
     margin-left:5px !important;
   }
+
 }
 
 @media (max-width:500px){
@@ -439,7 +493,7 @@ nav {
     max-width: 90vw;
   } 
 
-  .navbar .fa-close {
+  .navbar .icon-close {
    margin-right: 20px;
   }
 }
@@ -714,8 +768,10 @@ address {
   opacity: 1;
   font-weight: 400;
   text-transform: none;
-  .fa-envelope {
+  .icon-phone, .icon-envelope {
     color:rgb(249, 216, 53);
+    display: inline;
+    font-style: normal;
   }
   a {
     text-transform: lowercase;

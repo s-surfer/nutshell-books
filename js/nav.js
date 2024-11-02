@@ -3,24 +3,34 @@ const currentYear = new Date().getFullYear();
 const yearSpan = document.getElementById('year-span');
 yearSpan.textContent = currentYear;
 
+const focusableElements = 'button, input:not([type="hidden"]), select, textarea, [tabindex]:not([tabindex="-1"])';
+let firstFocusableElement,lastFocusableElement, focusableCount = 0;
+
 // search-box open close js code
 let navbar = document.querySelector(".navbar");
  
 // sidebar open close js code
 let navLinks = document.querySelector(".nav-links");
-let menuOpenBtn = document.querySelector(".navbar .fa-bars");
-let menuCloseBtn = document.querySelector(".nav-links .fa-close");
-menuOpenBtn.onclick = function() {
-navLinks.style.left = "0";
+let menuOpenBtn = document.querySelector(".navbar .icon-bars");
+let menuCloseBtn = document.querySelector(".nav-links .icon-close");
+
+if (menuOpenBtn) {
+  menuOpenBtn.onclick = function() {
+    navLinks.style.left = "0";
+  }
 }
-menuCloseBtn.onclick = function() {
-navLinks.style.left = "-120%";
+if (menuCloseBtn) {
+  menuCloseBtn.onclick = function() {
+    navLinks.style.left = "-120%";
+  }
 }
 
 // sidebar submenu open close js code
 let arrow = document.querySelector(".menu-arrow, .link-to-submenu");
-arrow.onclick = function() {
-  navLinks.classList.toggle("show1");
+if (arrow) {
+  arrow.onclick = function() {
+    navLinks.classList.toggle("show1");
+  }
 }
 
 //////////////////// modal contact window code //////////////////
@@ -40,6 +50,7 @@ function openModal(modalform, breed) {
         .then(response => response.text())
         .then(data => {
             htmlContentDiv.innerHTML = data;
+            // this is what activates the moda; by turing display to block
             modal.style.display = 'block';
            
             const imgElements = document.querySelectorAll('.breed-images');
@@ -67,7 +78,21 @@ function openModal(modalform, breed) {
                 let contentWidth = htmlContentDiv.scrollWidth;
                 modalContent.style.width = contentWidth + 'px';
             }, 100); // Timeout to ensure content is rendered first
+  
+            const focusableContent = getFocusableElements(modal); // Get visible focusable elements
+            focusableCount = focusableContent.length
+            firstFocusableElement = focusableContent[0];
+            lastFocusableElement = focusableContent[focusableCount - 1];
+            firstFocusableElement.focus();
+            
         });
+}
+
+// make sure onl visible elements are focusable - for tab
+function getFocusableElements(container) {
+  return Array.from(container.querySelectorAll(focusableElements)).filter(
+    el => el.offsetParent !== null && getComputedStyle(el).visibility !== 'hidden'
+  );
 }
 
 // Function to close the modal
@@ -81,9 +106,14 @@ function closeModal() {
 }
 
 // Event listeners for opening and closing the modal
-document.getElementById('openModalLink').addEventListener('click', () => {openModal("contact-us", "");});
+document.addEventListener('click', (event) => {
+  if (event.target.classList.contains('openModalLink')) {
+    openModal("contact-us", "");
+  };
+});
 // this one is for look inside where breed is passed as an attribute
 const element = document.getElementById("openLookInside");
+
 if (element) {
   document.getElementById('openLookInside').addEventListener('click', (e) => {
     openModal("look-inside", e.target.getAttribute("breed"));
@@ -102,8 +132,29 @@ window.onclick = function(event) {
 
 // Close modal when Escape pressed
 document.addEventListener('keydown', function(event) {
-    // Check if the pressed key is 'Escape' or 'Esc'
-    if (event.key === 'Escape' || event.key === 'Esc') {
+  // check for tab key  
+  if (event.key === "Tab") {
+    if (focusableCount) {
+      if (event.shiftKey) {
+        // Shift + Tab: cycle backward
+        if (document.activeElement === firstFocusableElement) {
+          event.preventDefault();
+          lastFocusableElement.focus();
+        }
+      } else {
+        // Tab: cycle forward
+        if (document.activeElement === lastFocusableElement) {
+          event.preventDefault();
+          firstFocusableElement.focus();
+        }
+      }
+    } else {
+      event.preventDefault();     // ignore tab
+      closeModal();
+    }
+  
+  // Check if the pressed key is 'Escape' or 'Esc'
+  } else  if (event.key === 'Escape' || event.key === 'Esc') {
         closeModal();
     }
 });

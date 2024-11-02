@@ -27,29 +27,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontawesome-free-6.2.1@6.2.1/css/all.min.css">
-     
+         
 </head>
 
 <body>
 
     <nav>
         <div class="navbar">
-            <i class='fa fa-bars'> <div>Menu</div></i>
+            <span class='icon-bars'> <div>Menu</div></span>
             <div class="logo">
                 <a href="./"><img class="nutshell-logo" src="./assets/images/nutshell-logo-2.avif" alt="Nutshell Logo"></a>
             </div>
             <div class="nav-links">
                 <div class="sidebar-logo">
                     <span class="logo-name"><img class="nutshell-logo" src="./assets/images/nutshell-logo-2.avif" alt="Nutshell Logo"></span>
-                    <i class='fa fa-close' ></i>
+                    <span class='icon-close' ></span>
                 </div>
                 <ul class="menu">
-                    <li class="menu-link" id="active-link"><a href="./"><i class='fa fa-house'>&nbsp&nbsp&nbsp</i>Home</a></li>
-                    <li class="menu-link"><a href="./all-books.html"><i class='fa fa-book-open'>&nbsp&nbsp&nbsp</i>Books</a></li>
-                    <li  class="menu-link link-to-submenu">
-                        <a href="#"><i class='fa fa-dog'>&nbsp&nbsp&nbsp</i>Breeds</a>
-                        <i class='fa fa-chevron-right menu-arrow'></i>
+                    <li class="menu-link"><a href="./"><span class="icon-home">&nbsp&nbsp</span>Home</a></li>
+                    <li class="menu-link"><a href="./all-books.html"><span class='icon-book-open'>&nbsp&nbsp</span>Books</a></li>
+                    <li  class="menu-link link-to-submenu" id="active-link">
+                        <a href="#"><span class='icon-dog'>&nbsp&nbsp</span>Breeds</a>
+                        <span class='icon-chevron-right menu-arrow'></span>
                         <ul class="sub-menu">
                             <li class="sub-menu-link"><a href="./your-puppy.html">All Puppies</a></li>
                             <li class="sub-menu-link"><a href="./beagle.html">Beagle</a></li>
@@ -67,8 +66,8 @@
                             <li class="sub-menu-link"><a href="./yorkie.html">Yorkie (Yorkshire Terrier)</a></li>
                         </ul>
                     </li>
-                <li class="menu-link"><a href="./about.html"><i class='fa fa-circle-info'>&nbsp&nbsp&nbsp</i>About</a></li>
-                <li class="menu-link"><a href="#" id="openModalLink"><i class='fa fa-envelope'>&nbsp&nbsp&nbsp</i>Contact</a></li>
+                <li class="menu-link"><a href="./about.html"><span class='icon-info'>&nbsp&nbsp</span>About</a></li>
+                <li class="menu-link"><a href="#" class="openModalLink"><span class='icon-envelope'>&nbsp&nbsp</span>Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -157,13 +156,13 @@
                     <a href="./"><img class="nutshell-logo" src="./assets/images/nutshell-logo-3.avif" alt="Nutshell Logo"/></a>
                 </div>
                 <address>
-                    <p><i class="fa fa-phone">&nbsp&nbsp&nbsp</i>+44 (0) 7908 768 413</p>
-                    <p><i class="fa fa-envelope">&nbsp&nbsp&nbsp</i><a href="mailto:info@nutshell-books.com">info@nutshell-books.com</a></p>
+                    <p><i class="icon-phone">&nbsp&nbsp&nbsp</i>+44 (0) 7908 768 413</p>
+                    <p><i class="icon-envelope">&nbsp&nbsp&nbsp</i><a href="mailto:info@nutshell-books.com">info@nutshell-books.com</a></p>
                 </address>
             </div>
             <div id="footer-center" class="footer-ctn">
                 <div class="inner-ctn">
-                    <h4 class="footer-header">Other books in the series:<br />You and Your Puppy in a Nutshell</h4>
+                    <p class="footer-header">Other books in the series:<br />You and Your Puppy in a Nutshell</p>
                     <div class="book-lists">
                         <div>
                             <ul class="footer-list">
@@ -191,12 +190,12 @@
             </div>
             <div id="footer-right" class="footer-ctn">
                 <div class="inner-ctn">
-                     <h4 class="footer-header">Explore</h4>
+                     <p class="footer-header">Explore</p>
                      <ul class="footer-list">
                          <li><a href="./">Home</a></li>
                          <li><a href="./all-books.html">Books</a></li>
                          <li><a href="./about.html">About</a></li>
-                         <li><a href="#" id="openModalLink">Contact</a></li>
+                         <li><a href="#" class="openModalLink">Contact</a></li>
                      </ul>
                 </div>
              </div>
