@@ -1,10 +1,7 @@
-
 /* ----------------------------  CONTACT PAGE ---------------------- */
-
 :root {
   --background-color: #fff9c4 /*#fffde7;*/
 }
-
 
 * {
 line-height: 1;
@@ -12,161 +9,161 @@ font-family: 'Roboto', sans-serif;
 }
 
 .contact-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    background-color: var(--background-color);
-    h1 {
-      text-align: center;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      font-size: 28px;
-      color: saddlebrown;
-    }
-    h2 {
-      font-size: 18px;
-      font-weight: 500;
-      margin: 10px;
-      color: saddlebrown;
-      text-align: center;
-    }
-    p {
-      text-align: center;
-      font-size: 18px;
-      margin: 10px 10px 20px 10px;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: var(--background-color);
+  h1 {
+    text-align: center;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    color: saddlebrown;
   }
-  
-  /*  web3form   */
-  
-  .contact-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    .form-group-container{
-      margin: 10px;
-    }
-  }
-
-  .contact-intro > * + * {
-    margin-top: 1rem;
-  }
-  
-  .contact-title {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    font-weight: 700;
-  }
-  
-  .contact-description {
-    color: rgb(107 114 128);
-  }
-  
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-  }
-  
-  .form-label {
-    margin-bottom: 0.25rem;
+  h2 {
+    font-size: 18px;
     font-weight: 500;
-    position: relative;
-    display: block;
-    margin-bottom: 5px;
-  
-  }
-  
-  .form-inputs {
-    margin-top: 5px;
-    margin-bottom: 10px;
-    padding: 0.75rem;
-    border: 1px solid saddlebrown;
-    display: flex;
-    width: 100%;
-    border-radius: 0.375rem;
-    font-size: 1rem;
-    line-height: 1.25rem;
-    background-color: var(--background-color);
-    box-sizing: border-box;
-    height: 3rem;
-  }
-  
-  .form-textarea {
-    height: auto;
-  }
-  
-  /* new form design  below */
-  .placeholder_text {
-    padding: 10px;
-    pointer-events: none;
-    position: absolute;
-    left:5px;
-    top:10px;
-    transition: 0.4s;
-    opacity: 0.75;
-    font-size:14px;
-    font-weight: 400;
-  }
-  
-  /* When input is focused, or the placeholder is not being displayed, change the border to blue */
-  .form-inputs:focus, .form-inputs:not(:placeholder-shown) {
-    outline: 1px solid saddlebrown;
-  }
-  
-  /* When input is focused, or the placeholder is not being displayed, change the placeholder size, position and color */
-  .form-inputs:focus + span, .form-inputs:not(:placeholder-shown) + span {
-    color: saddlebrown;
-    font-size: 14px;
-    font-weight: 400;
-    transform: translateY(-23px) translateX(4px);
-    text-align: left;
-    line-height:6px;
-    background-color: var(--background-color);
-    opacity:1;
-  }
-  
-  /* gets rid of blue autocomplete */
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px var(--background-color) inset !important;
-  }
-  
-  /*  new for design above */
-  
-  .form-submit {
     margin: 10px;
-    background-color: #ffeaa7;
     color: saddlebrown;
-    font-weight: 600;
-    padding: 15px;
-    border: 1px solid saddlebrown;
-    border-radius: 25px;
-    font-size: 16px;
-    &:hover {
-      background-color: saddlebrown;
-      color:white;
-    }
+    text-align: center;
   }
-  
-  .input-required {
-    color: red;
+  p {
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 10px 20px 10px;
   }
+}
   
-  @keyframes blink {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+/*  web3form   */
+
+.contact-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .form-group-container{
+    margin: 10px;
+  }
+}
+
+.contact-intro > * + * {
+  margin-top: 1rem;
+}
+
+.contact-title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+}
+
+.contact-description {
+  color: rgb(107 114 128);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.form-label {
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+  position: relative;
+  display: block;
+  margin-bottom: 5px;
+
+}
+
+.form-inputs {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 0.75rem;
+  border: 1px solid saddlebrown;
+  display: flex;
+  width: 100%;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  background-color: var(--background-color);
+  box-sizing: border-box;
+  height: 3rem;
+}
+
+.form-textarea {
+  height: auto;
+}
+
+/* new form design  below */
+.placeholder_text {
+  padding: 10px;
+  pointer-events: none;
+  position: absolute;
+  left:5px;
+  top:10px;
+  transition: 0.4s;
+  opacity: 0.75;
+  font-size:14px;
+  font-weight: 400;
+}
+
+/* When input is focused, or the placeholder is not being displayed, change the border to blue */
+.form-inputs:focus, .form-inputs:not(:placeholder-shown) {
+  outline: 1px solid saddlebrown;
+}
+
+/* When input is focused, or the placeholder is not being displayed, change the placeholder size, position and color */
+.form-inputs:focus + span, .form-inputs:not(:placeholder-shown) + span {
+  color: saddlebrown;
+  font-size: 14px;
+  font-weight: 400;
+  transform: translateY(-23px) translateX(4px);
+  text-align: left;
+  line-height:6px;
+  background-color: var(--background-color);
+  opacity:1;
+}
+
+/* gets rid of blue autocomplete */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--background-color) inset !important;
+}
+
+/*  new for design above */
+
+.form-submit {
+  margin: 10px;
+  background-color: #ffeaa7;
+  color: saddlebrown;
+  font-weight: 600;
+  padding: 15px;
+  border: 1px solid saddlebrown;
+  border-radius: 25px;
+  font-size: 16px;
+  &:hover {
+    background-color: saddlebrown;
+    color:white;
+  }
+}
+
+.input-required {
+  color: red;
+}
+  
+@keyframes blink {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }
 
 .blinking-result {

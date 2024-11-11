@@ -60,15 +60,16 @@ function openModal(modalform, breed) {
             });
             // change top and height for look inside
             const modalDiv = document.getElementById("modalContent");
+                        
             if (breed !== "") {
               modalDiv.style.setProperty("top","520px");
               modalDiv.style.setProperty("left","50%");
               modalDiv.style.setProperty("padding","10px auto");
-              
+                          
               if (window.matchMedia("(max-width: 600px)").matches) {
-                modalDiv.style.setProperty("max-width","90%");
+                modalDiv.style.setProperty("max-width","92%");
               } else if (window.matchMedia("(max-width: 1000px)").matches) {
-                modalDiv.style.setProperty("max-width","60%");
+                modalDiv.style.setProperty("max-width","70%");
               } else {
                 modalDiv.style.setProperty("max-width","600px");
               };
@@ -111,6 +112,7 @@ document.addEventListener('click', (event) => {
     openModal("contact-us", "");
   };
 });
+
 // this one is for look inside where breed is passed as an attribute
 const element = document.getElementById("openLookInside");
 

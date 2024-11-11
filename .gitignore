@@ -1,0 +1,15 @@
+# Ignore all .map files
+*.map
+
+# Ignore all .scss files
+*.scss
+
+# Ignore all .json files
+*.json
+
+# Ignore all .del files due for deletion
+*.del
+
+#Ignore css files in Base and Modules
+base/
+modules/

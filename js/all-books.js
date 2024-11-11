@@ -1,6 +1,6 @@
 // /* --- check which breed has been chosen and hide other books ---- */
 
-document.querySelectorAll('.br-btn').forEach(button => {
+document.querySelectorAll('.breed-radio-btns__btn').forEach(button => {
     button.addEventListener('click', event => {
         
         var breed = button.id; 

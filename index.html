@@ -19,10 +19,8 @@
     <title>Nutshell Books | Provider of invaluable guide books for puppy owners</title>
     <link rel="icon" type="image/x-icon" href="./assets/images/nutshell-favicon.ico"/>
 
-    <link rel="stylesheet" href="./css/main.min.css" />
-    <link rel="preload" href="./css/modal.css" as="style" onload="this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="./css/modal.css"></noscript>
-    
+    <link rel="stylesheet" href="./css/style.min.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -132,22 +130,27 @@
         <!-- mid section including text and sliders -->
     
     <!-- top container with text -->
-    <div id="home-mid-ctn">
-        <div id="home-lft-row">
-            <h1><span>Nutshell Books <img class="favcon" src="./assets/images/nutshell-favicon.ico" alt="Nutshell icon"></span> <span>you and your PUPPY series <img class="favcon" src="./assets/images/nutshell-favicon.ico" alt="Nutshell"></span></h1><h2 class="nutshell-txt">in a nutshell</span></h2>
-            <p>Welcome to Nutshell Books. A series of puppy-care guides devoted to you and your new family member – in equal measure.</p>
-            <p>You’re headed for some big and exciting changes, and your puppy will most certainly be thrown into an entirely new world. There’s a lot for you both to take on, and that is the reason for these books.</p>
-            <p>Each one provides invaluable, up-to-date and specific advice to help you get your unique relationship off to a wonder-filled start.</p>
-        </div>
-        <div id="home-rgt-row">
-            <div class="testimonial">
-                <blockquote>A brilliant find!</blockquote>
+    <div class="flex-split">
+        <div class="flex-split__66">
+            <div class="flex-split__ctn-l">
+                <h1 class="m0 fs150 fw5"><span>Nutshell Books <img class="favcon" src="./assets/images/nutshell-favicon.ico" alt="Nutshell icon"></span> <span>you and your PUPPY series <img class="favcon" src="./assets/images/nutshell-favicon.ico" alt="Nutshell icon"></span></h1>
+                <h2 class="m0 fs150 fw5 fc-d-brown">in a nutshell</span></h2>
+                <p>Welcome to Nutshell Books. A series of puppy-care guides devoted to you and your new family member – in equal measure.</p>
+                <p>You’re headed for some big and exciting changes, and your puppy will most certainly be thrown into an entirely new world. There’s a lot for you both to take on, and that is the reason for these books.</p>
+                <p>Each one provides invaluable, up-to-date and specific advice to help you get your unique relationship off to a wonder-filled start.</p>
             </div>
-            <div class="testimonial">
-                <blockquote>Heart-warming and incredibly helpful!</blockquote>
-            </div> 
-            <div class="testimonial">
-                <blockquote>… will be keeping this close for easy reference …</blockquote>
+        </div>
+        <div class="flex-split__33">
+            <div class="flex-split__ctn-r">
+                <div class="testimonial js-center">
+                    <blockquote>A brilliant find!</blockquote>
+                </div>
+                <div class="testimonial js-center">
+                    <blockquote>Heart-warming and incredibly helpful!</blockquote>
+                </div> 
+                <div class="testimonial js-center">
+                    <blockquote>… will be keeping this close for easy reference …</blockquote>
+                </div>
             </div>
         </div>
     </div>
@@ -191,22 +194,23 @@
         </div>  
     </sliders>
 
-     <!-- footer -->
-     <footer>
-        <footer-section>
-            
-            <div id="footer-left" class="footer-ctn">
-                <div id="footer-logo">
-                    <a href="./"><img class="nutshell-logo" src="./assets/images/nutshell-logo-3.avif" alt="Nutshell Logo"/></a>
+    <!-- footer -->
+    <footer>
+        <div class="flex-split jt-l">
+            <div class="flex-split__25">
+                <div class="flex-split__ctn-l">
+                    <div class="footer-logo">
+                        <a href="./"><img class="nutshell-logo" src="./assets/images/nutshell-logo-3.avif" alt="Nutshell Logo"/></a>
+                    </div>
+                    <address>
+                        <p><span class="icon-phone">&nbsp&nbsp&nbsp</span>+44 (0) 7908 768 413</p>
+                        <p><span class="icon-envelope">&nbsp&nbsp&nbsp</span><a href="mailto:info@nutshell-books.com">info@nutshell-books.com</a></p>
+                    </address>
                 </div>
-                <address>
-                    <p><span class="icon-phone">&nbsp&nbsp&nbsp</span>+44 (0) 7908 768 413</p>
-                    <p><span class="icon-envelope">&nbsp&nbsp&nbsp</span><a href="mailto:info@nutshell-books.com">info@nutshell-books.com</a></p>
-                </address>
             </div>
-            <div id="footer-center" class="footer-ctn">
-                <div class="inner-ctn">
-                    <p class="footer-header">Books in the series:<br />You and Your Puppy in a Nutshell</p>
+            <div class="flex-split__50">
+                <div class="flex-split__ctn-c">
+                    <p class="fs1125 fw5 fc-d-orange mt0">Books in the series:<br />You and Your Puppy in a Nutshell</p>
                     <div class="book-lists">
                         <div>
                             <ul class="footer-list">
@@ -233,9 +237,9 @@
                     </div>
                 </div>
             </div>
-            <div id="footer-right" class="footer-ctn">
-                <div class="inner-ctn">
-                     <p class="footer-header">Explore</p>
+            <div class="flex-split__25">
+                <div class="flex-split__ctn-r">
+                     <p class="fs1125 fw5 fc-d-orange mt0">Explore</p>
                      <ul class="footer-list">
                          <li><a href="./">Home</a></li>
                          <li><a href="./all-books.html">Books</a></li>
@@ -244,9 +248,9 @@
                      </ul>
                 </div>
              </div>
-        </footer-section>
+        </div>
 
-        <div class="copyright-wrapper">
+        <div class="copyright-wrapper fc-d-yellow">
             <div class="copyright-lft footer-ctn">
                 Copyright © <span id="year-span">xxxx</span> Nutshell Books - 12041821
             </div>

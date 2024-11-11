@@ -19,11 +19,8 @@
     <title>Your Puppy | Nutshell Books</title>
     <link rel="icon" type="image/x-icon" href="./assets/images/nutshell-favicon.ico"/>
 
-    <link rel="stylesheet" href="./css/main.min.css">
-    <link rel="preload" href="./css/modal.css" as="style" onload="this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="./css/modal.css"></noscript>
-    <link rel="stylesheet" href="./css/books.css">
-   
+    <link rel="stylesheet" href="./css/style.min.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -36,21 +33,21 @@
 
     <nav>
         <div class="navbar">
-            <i class='fa fa-bars'> <div>Menu</div></i>
+            <span class='icon-bars'> <div>Menu</div></span>
             <div class="logo">
                 <a href="./"><img class="nutshell-logo" src="./assets/images/nutshell-logo-2.avif" alt="Nutshell Logo"></a>
             </div>
             <div class="nav-links">
                 <div class="sidebar-logo">
                     <span class="logo-name"><img class="nutshell-logo" src="./assets/images/nutshell-logo-2.avif" alt="Nutshell Logo"></span>
-                    <i class='fa fa-close' ></i>
+                    <span class='icon-close' ></span>
                 </div>
                 <ul class="menu">
-                    <li class="menu-link"><a href="./"><i class='fa fa-house'>&nbsp&nbsp&nbsp</i>Home</a></li>
-                    <li class="menu-link"><a href="./all-books.html"><i class='fa fa-book-open'>&nbsp&nbsp&nbsp</i>Books</a></li>
-                    <li  class="menu-link link-to-submenu"  id="active-link">
-                        <a href="#"><i class='fa fa-dog'>&nbsp&nbsp&nbsp</i>Breeds</a>
-                        <i class='fa fa-chevron-right menu-arrow'></i>
+                    <li class="menu-link"><a href="./"><span class="icon-home">&nbsp&nbsp</span>Home</a></li>
+                    <li class="menu-link"><a href="./all-books.html"><span class='icon-book-open'>&nbsp&nbsp</span>Books</a></li>
+                    <li  class="menu-link link-to-submenu" id="active-link">
+                        <a href="#"><span class='icon-dog'>&nbsp&nbsp</span>Breeds</a>
+                        <span class='icon-chevron-right menu-arrow'></span>
                         <ul class="sub-menu">
                             <li class="sub-menu-link"><a href="./your-puppy.html">All Puppies</a></li>
                             <li class="sub-menu-link"><a href="./beagle.html">Beagle</a></li>
@@ -68,56 +65,59 @@
                             <li class="sub-menu-link"><a href="./yorkie.html">Yorkie (Yorkshire Terrier)</a></li>
                         </ul>
                     </li>
-                <li class="menu-link"><a href="./about.html"><i class='fa fa-circle-info'>&nbsp&nbsp&nbsp</i>About</a></li>
-                <li class="menu-link"><a href="#" id="openModalLink"><i class='fa fa-envelope'>&nbsp&nbsp&nbsp</i>Contact</a></li>
+                <li class="menu-link"><a href="./about.html"><span class='icon-info'>&nbsp&nbsp</span>About</a></li>
+                <li class="menu-link"><a href="#" class="openModalLink"><span class='icon-envelope'>&nbsp&nbsp</span>Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-   <!-- Modal contact form -->
-   <div id="myModal" class="modal" style="display: none;">
-    <div class="modal-content" id="modalContent">
-        <span class="close" id="closeModal">&times;</span>
-        <div id="htmlContent"></div>
-    </div>
-</div> 
+    <!-- Modal contact form -->
+    <div id="myModal" class="modal" style="display: none;">
+        <div class="modal-content" id="modalContent">
+            <span class="close" id="closeModal">&times;</span>
+            <div id="htmlContent"></div>
+        </div>
+    </div> 
     
     <!-- top container with text -->
-    <div id="book-top">
-        
-        <div id="book-lft-rw">
-            <h1>you and your PUPPY in a nutshell</h1>
-            <h2>The essential owners' guide to perfect puppy parenting - with easy-to-follow steps on how to choose and care for your new arrival</h2>
-            <h3>Part of the Series: You and Your Puppy in a Nutshell</h3>
-            <p>A compact summary of the latest findings in puppy care and behaviour, this guide will help you be the best puppy parent you can possibly be, and get your special relationship off to a wonder-filled start.</p>
-            <p>With easy-to-read, easy-to-follow advice, it walks you step by step from deciding whether a puppy is right for you, to the daunting first days and weeks, and through the first crucial months. Its amusing DOs and DON'Ts of puppy care will keep you smiling through the poops, night-time whimpers and shredded items of personal value.</p>
-            <h3>About the book</h3>
-            <p><span class="fst-italic">You and Your Puppy in a Nutshell</span> covers pure breeds, cross breeds and mixed breeds alike. This is the best choice for you if you are:</p>
-            <ul>
-                <li>considering dog ownership in principle,</li>
-                <li>or weighing up what type of dog would be a good fit for your household and lifestyle.</li>
-            </ul>
-            <p>It is a compact summary of the latest findings in puppy care and behaviour that guides you step by step through the process – from choosing your puppy and preparing for the homecoming, to those first exciting and sometimes overwhelming days, and through the crucial early weeks and months when your puppy is growing and learning at its fastest.</p>
+    <div class="flex-split">
+        <div class="flex-split__66">
+            <div class="flex-split__ctn-l">
+                <h1 class="fs150 fw7">you and your PUPPY in a nutshell</h1>
+                <h2 class="fs1125 fw5 fc-d-brown lh150">The essential owners' guide to perfect puppy parenting - with easy-to-follow steps on how to choose and care for your new arrival</h2>
+                <h3 class="fs1125 fw5">Part of the Series: You and Your Puppy in a Nutshell</h3>
+                <p>A compact summary of the latest findings in puppy care and behaviour, this guide will help you be the best puppy parent you can possibly be, and get your special relationship off to a wonder-filled start.</p>
+                <p>With easy-to-read, easy-to-follow advice, it walks you step by step from deciding whether a puppy is right for you, to the daunting first days and weeks, and through the first crucial months. Its amusing DOs and DON'Ts of puppy care will keep you smiling through the poops, night-time whimpers and shredded items of personal value.</p>
+                <h3 class="fs1125 fw5">About the book</h3>
+                <p><span class="fst-italic">You and Your Puppy in a Nutshell</span> covers pure breeds, cross breeds and mixed breeds alike. This is the best choice for you if you are:</p>
+                <ul>
+                    <li>considering dog ownership in principle,</li>
+                    <li>or weighing up what type of dog would be a good fit for your household and lifestyle.</li>
+                </ul>
+                <p>It is a compact summary of the latest findings in puppy care and behaviour that guides you step by step through the process – from choosing your puppy and preparing for the homecoming, to those first exciting and sometimes overwhelming days, and through the crucial early weeks and months when your puppy is growing and learning at its fastest.</p>
+            </div>
         </div>
-        <div id="book-rgt-rw">
-            <div id="book-cover">
-                <button id="openLookInside" breed="your-puppy">look inside</button>
-                <div>
-                    <img class="lazy" src="./assets/images/book-covers/book-puppy-194x300.avif" alt="Puppy book cover" loading="lazy">
-                </div>  
-                <p>Available on Amazon</p>
-                <a class="book-buy-btn" href="https://www.amazon.co.uk/Your-Puppy-Nutshell-easy-follow-ebook/dp/B08946NNNH" target="_blank" nofollow>Buy eBook</a>
-                <a class="book-buy-btn" href="https://www.amazon.co.uk/dp/191618975X" target="_blank" nofollow>Buy Paperback</a>
-            </div>
-            <div class="testimonial">
-                <blockquote>Detailed but not over complicated, this book explains clearly what you are ‘in for’ … and then helps with the practicalities. Thank you</blockquote>
-            </div>
-            <div class="testimonial">
-                <blockquote>… scenarios I would never have thought about</blockquote>
-            </div>
-            <div class="testimonial">
-                <blockquote>… sensible advice on a myriad of topics for early stage puppy parents</blockquote>
+        <div class="flex-split__33">
+            <div class="flex-split__ctn-r">
+                <div class="buy-book">
+                    <button id="openLookInside" class="btn btn__buy-book btn--long btn--d-brown b-rad-l mb100" breed="your-puppy">look inside</button>
+                    <div class="buy-book__ctn">
+                        <img class="buy-book__img" src="./assets/images/book-covers/book-puppy-194x300.avif" alt="Puppy book cover" loading="lazy">
+                    </div>  
+                    <p class="fc-d-brown mb100">Available on Amazon</p>
+                    <a class="btn btn__buy-book btn--long btn--d-brown b-rad-l mb100"  href="https://www.amazon.co.uk/Your-Puppy-Nutshell-easy-follow-ebook/dp/B08946NNNH" target="_blank" nofollow>Buy eBook</a>
+                    <a class="btn btn__buy-book btn--long btn--d-brown b-rad-l mb100"  href="https://www.amazon.co.uk/dp/191618975X" target="_blank" nofollow>Buy Paperback</a>
+                </div>
+                <div class="testimonial js-center">
+                    <blockquote>Detailed but not over complicated, this book explains clearly what you are ‘in for’ … and then helps with the practicalities. Thank you</blockquote>
+                </div>
+                <div class="testimonial js-center">
+                    <blockquote>… scenarios I would never have thought about</blockquote>
+                </div>
+                <div class="testimonial js-center">
+                    <blockquote>… sensible advice on a myriad of topics for early stage puppy parents</blockquote>
+                </div>
             </div>
         </div>
     </div>
@@ -154,21 +154,22 @@
    
 
      <!-- footer -->
-     <footer>
-        <footer-section>
-            
-            <div id="footer-left" class="footer-ctn">
-                <div id="footer-logo">
+   <footer>
+    <div class="flex-split jt-l">
+        <div class="flex-split__25">
+            <div class="flex-split__ctn-l">
+                <div class="footer-logo">
                     <a href="./"><img class="nutshell-logo" src="./assets/images/nutshell-logo-3.avif" alt="Nutshell Logo"/></a>
                 </div>
                 <address>
-                    <p><span class="fa fa-phone">&nbsp&nbsp&nbsp</span>+44 (0) 7908 768 413</p>
-                    <p><span class="fa fa-envelope">&nbsp&nbsp&nbsp</span><a href="mailto:info@nutshell-books.com">info@nutshell-books.com</a></p>
+                    <p><span class="icon-phone">&nbsp&nbsp&nbsp</span>+44 (0) 7908 768 413</p>
+                    <p><span class="icon-envelope">&nbsp&nbsp&nbsp</span><a href="mailto:info@nutshell-books.com">info@nutshell-books.com</a></p>
                 </address>
             </div>
-            <div id="footer-center" class="footer-ctn">
-                <div class="inner-ctn">
-                    <h4 class="footer-header">Other books in the series:<br />You and Your Puppy in a Nutshell</h4>
+        </div>
+        <div class="flex-split__50">
+            <div class="flex-split__ctn-c">
+                <p class="fs1125 fw5 fc-d-orange mt0">Books in the series:<br />You and Your Puppy in a Nutshell</p>
                     <div class="book-lists">
                         <div>
                             <ul class="footer-list">
@@ -194,20 +195,20 @@
                     </div>
                 </div>
             </div>
-            <div id="footer-right" class="footer-ctn">
-                <div class="inner-ctn">
-                     <h4 class="footer-header">Explore</h4>
+            <div class="flex-split__25">
+                <div class="flex-split__ctn-r">
+                     <p class="fs1125 fw5 fc-d-orange mt0">Explore</p>
                      <ul class="footer-list">
                          <li><a href="./">Home</a></li>
                          <li><a href="./all-books.html">Books</a></li>
                          <li><a href="./about.html">About</a></li>
-                         <li><a href="#" id="openModalLink">Contact</a></li>
+                         <li><a href="#" class="openModalLink">Contact</a></li>
                      </ul>
                 </div>
              </div>
-        </footer-section>
-
-        <div class="copyright-wrapper">
+        </div>
+       
+        <div class="copyright-wrapper fc-d-yellow">
             <div class="copyright-lft footer-ctn">
                 Copyright © <span id="year-span">xxxx</span> Nutshell Books - 12041821
             </div>
