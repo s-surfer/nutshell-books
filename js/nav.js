@@ -40,6 +40,8 @@ function openModal(modalform, breed) {
     const modal = document.getElementById('myModal');
     const modalContent = document.getElementById('modalContent');
     const htmlContentDiv = document.getElementById('htmlContent');
+
+    document.body.classList.add('modal-open'); // Prevent background shift
     
     setTimeout(() => {
         modalContent.classList.add('show');
@@ -62,6 +64,9 @@ function openModal(modalform, breed) {
             const modalDiv = document.getElementById("modalContent");
                         
             if (breed !== "") {
+              // lookinside
+              modalContent.classList.add('modal-center'); //position of modal window
+
               modalDiv.style.setProperty("top","520px");
               modalDiv.style.setProperty("left","50%");
               modalDiv.style.setProperty("padding","10px auto");
@@ -73,12 +78,14 @@ function openModal(modalform, breed) {
               } else {
                 modalDiv.style.setProperty("max-width","600px");
               };
+            } else {
+              modalContent.classList.add('modal-right'); //position of modal window
             } 
             // Adjust modal width based on content width
-            setTimeout(() => {
-                let contentWidth = htmlContentDiv.scrollWidth;
-                modalContent.style.width = contentWidth + 'px';
-            }, 100); // Timeout to ensure content is rendered first
+            // setTimeout(() => {
+                // let contentWidth = htmlContentDiv.scrollWidth;
+                // modalContent.style.width = contentWidth + 'px';
+            // }, 100); // Timeout to ensure content is rendered first
   
             const focusableContent = getFocusableElements(modal); // Get visible focusable elements
             focusableCount = focusableContent.length
@@ -98,10 +105,15 @@ function getFocusableElements(container) {
 
 // Function to close the modal
 function closeModal() {
-    document.getElementById('myModal').style.display = 'none';
+  
+  document.body.classList.remove('modal-open'); // Prevent background shift
+  
+  document.getElementById('myModal').style.display = 'none';
     const modalContent = document.querySelector('.modal-content');
     modalContent.removeAttribute('style'); // Reset inline styles
     modalContent.classList.remove('show');
+    modalContent.classList.remove('modal-center');
+    modalContent.classList.remove('modal-right');
     // remove htmlcontent
     document.getElementById("htmlContent").innerHTML = "";
 }
