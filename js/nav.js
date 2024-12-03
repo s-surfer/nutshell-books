@@ -7,7 +7,7 @@ const focusableElements = 'button, input:not([type="hidden"]), select, textarea,
 let firstFocusableElement,lastFocusableElement, focusableCount = 0;
 
 // search-box open close js code
-let navbar = document.querySelector(".navbar");
+// let navbar = document.querySelector(".navbar");
  
 // sidebar open close js code
 let navLinks = document.querySelector(".nav-links");
@@ -37,10 +37,27 @@ if (arrow) {
 
 function openModal(modalform, breed) {
     
-    const modal = document.getElementById('myModal');
+    // create the modal div and append to the document
+    const modal = document.createElement("div");
+    modal.classList.add('modal');
+    modal.id = "myModal";
+    
+    modal.innerHTML = `
+        <div class="modal-content" id="modalContent">
+            <span class="close" id="closeModal">&times;</span>
+            <div id="htmlContent"></div>
+        </div>
+    `;
+
+    document.body.appendChild(modal);
+    // document.body.insertAdjacentElement('beforeend', modal);
+
     const modalContent = document.getElementById('modalContent');
     const htmlContentDiv = document.getElementById('htmlContent');
 
+    // adds observer to the dom to check whether child has been appended to add closeModal eventlistener
+    observer.observe(document.body, { childList: true, subtree: true });
+    
     document.body.classList.add('modal-open'); // Prevent background shift
     
     setTimeout(() => {
@@ -65,111 +82,89 @@ function openModal(modalform, breed) {
                         
             if (breed !== "") {
               // lookinside
-              modalContent.classList.add('modal-center'); //position of modal window
-
-              modalDiv.style.setProperty("top","520px");
-              modalDiv.style.setProperty("left","50%");
-              modalDiv.style.setProperty("padding","10px auto");
-                          
               if (window.matchMedia("(max-width: 600px)").matches) {
-                modalDiv.style.setProperty("max-width","92%");
+                modalContent.classList.add('modal-center','modal-center__breed','modal-center__w92p'); 
               } else if (window.matchMedia("(max-width: 1000px)").matches) {
-                modalDiv.style.setProperty("max-width","70%");
+                modalContent.classList.add('modal-center','modal-center__breed','modal-center__w70p'); 
               } else {
-                modalDiv.style.setProperty("max-width","600px");
+                modalContent.classList.add('modal-center','modal-center__breed'); 
               };
             } else {
               modalContent.classList.add('modal-right'); //position of modal window
             } 
-            // Adjust modal width based on content width
-            // setTimeout(() => {
-                // let contentWidth = htmlContentDiv.scrollWidth;
-                // modalContent.style.width = contentWidth + 'px';
-            // }, 100); // Timeout to ensure content is rendered first
-  
             const focusableContent = getFocusableElements(modal); // Get visible focusable elements
             focusableCount = focusableContent.length
             firstFocusableElement = focusableContent[0];
             lastFocusableElement = focusableContent[focusableCount - 1];
-            firstFocusableElement.focus();
-            
-        });
-}
+            if (focusableContent.length) {
+              firstFocusableElement.focus();
+            };
 
-// make sure onl visible elements are focusable - for tab
-function getFocusableElements(container) {
-  return Array.from(container.querySelectorAll(focusableElements)).filter(
-    el => el.offsetParent !== null && getComputedStyle(el).visibility !== 'hidden'
-  );
+          });
 }
 
 // Function to close the modal
 function closeModal() {
-  
-  document.body.classList.remove('modal-open'); // Prevent background shift
-  
-  document.getElementById('myModal').style.display = 'none';
-    const modalContent = document.querySelector('.modal-content');
-    modalContent.removeAttribute('style'); // Reset inline styles
-    modalContent.classList.remove('show');
-    modalContent.classList.remove('modal-center');
-    modalContent.classList.remove('modal-right');
-    // remove htmlcontent
-    document.getElementById("htmlContent").innerHTML = "";
+  //remove the modal div
+  document.body.removeChild(document.getElementById("myModal"));
 }
 
 // Event listeners for opening and closing the modal
-document.addEventListener('click', (event) => {
-  if (event.target.classList.contains('openModalLink')) {
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('openModalLink')) {
     openModal("contact-us", "");
   };
 });
 
 // this one is for look inside where breed is passed as an attribute
 const element = document.getElementById("openLookInside");
-
 if (element) {
   document.getElementById('openLookInside').addEventListener('click', (e) => {
     openModal("look-inside", e.target.getAttribute("breed"));
   });
 };
 
-document.getElementById('closeModal').addEventListener('click', closeModal);
-
 // Close modal when clicking outside the modal content
-window.onclick = function(event) {
+window.onclick = function(e) {
     const modal = document.getElementById('myModal');
-    if (event.target === modal) {
+    if (e.target === modal) {
       closeModal();
     }
 };
 
-// Close modal when Escape pressed
-document.addEventListener('keydown', function(event) {
+// make sure only visible elements are focusable - for tab
+function getFocusableElements(container) {
+  return Array.from(container.querySelectorAll(focusableElements)).filter(
+    el => el.offsetParent !== null && getComputedStyle(el).visibility !== 'hidden'
+  );
+}
+
+// checkes for key pressed - either close modal when Escape pressed or tab thro
+document.addEventListener('keydown', function(e) {
   // check for tab key  
-  if (event.key === "Tab") {
+  if (e.key === "Tab") {
     if (focusableCount) {
-      if (event.shiftKey) {
+      if (e.shiftKey) {
         // Shift + Tab: cycle backward
         if (document.activeElement === firstFocusableElement) {
-          event.preventDefault();
+          e.preventDefault();
           lastFocusableElement.focus();
         }
       } else {
         // Tab: cycle forward
         if (document.activeElement === lastFocusableElement) {
-          event.preventDefault();
+          e.preventDefault();
           firstFocusableElement.focus();
         }
       }
     } else {
-      event.preventDefault();     // ignore tab
+      e.preventDefault();     // ignore tab
       closeModal();
     }
   
   // Check if the pressed key is 'Escape' or 'Esc'
-  } else  if (event.key === 'Escape' || event.key === 'Esc') {
-        closeModal();
+  } else  if (e.key === 'Escape' || e.key === 'Esc') {
+      closeModal();
     }
 });
 
@@ -223,6 +218,21 @@ function modalSubmit(e) {
       });
   };
 
+// Function to add event listener when the modal button is available
+function addModalEventListener() {
+  const modalButton = document.getElementById("closeModal");
+  if (modalButton) {
+    modalButton.addEventListener("click", () => {
+      closeModal();
+    });
+    observer.disconnect(); // Stop observing once event listener is added
+  }
+}
+
+// Set up a MutationObserver to watch for changes in the DOM
+const observer = new MutationObserver(() => {
+  addModalEventListener();
+});
 
 ////// lazy loading images for mobiles ////////
 function applyLazyLoading() {

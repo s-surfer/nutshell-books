@@ -5,7 +5,7 @@ document.querySelectorAll('.breed-radio-btns__btn').forEach(button => {
         
         var breed = button.id; 
                 
-        document.querySelectorAll(".book-cover").forEach(book => {
+        document.querySelectorAll(".book-covers__cover").forEach(book => {
             var bookClasses = book.classList.value;
             if (bookClasses.includes(breed) === false ){
                 book.classList.add("dont-display-breed");

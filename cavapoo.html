@@ -41,10 +41,10 @@
                     <span class='icon-close' ></span>
                 </div>
                 <ul class="menu">
-                    <li class="menu-link"><a href="./"><span class="icon-home">&nbsp&nbsp</span>Home</a></li>
-                    <li class="menu-link"><a href="./all-books.html"><span class='icon-book-open'>&nbsp&nbsp</span>Books</a></li>
+                    <li class="menu-link"><a href="./"><span class="icon-home" aria-hidden="true">&nbsp&nbsp</span>Home</a></li>
+                    <li class="menu-link"><a href="./all-books.html"><span class='icon-book-open' aria-hidden="true">&nbsp&nbsp</span>Books</a></li>
                     <li  class="menu-link link-to-submenu" id="active-link">
-                        <a href="#"><span class='icon-dog'>&nbsp&nbsp</span>Breeds</a>
+                        <a href="#"><span class='icon-dog' aria-hidden="true">&nbsp&nbsp</span>Breeds</a>
                         <span class='icon-chevron-right menu-arrow'></span>
                         <ul class="sub-menu">
                             <li class="sub-menu-link"><a href="./your-puppy.html">All Puppies</a></li>
@@ -63,38 +63,28 @@
                             <li class="sub-menu-link"><a href="./yorkie.html">Yorkie (Yorkshire Terrier)</a></li>
                         </ul>
                     </li>
-                <li class="menu-link"><a href="./about.html"><span class='icon-info'>&nbsp&nbsp</span>About</a></li>
-                <li class="menu-link"><a href="#" class="openModalLink"><span class='icon-envelope'>&nbsp&nbsp</span>Contact</a></li>
+                <li class="menu-link"><a href="./about.html"><span class='icon-info' aria-hidden="true">&nbsp&nbsp</span>About</a></li>
+                <li class="menu-link"><a href="#" class="openModalLink"><span class='icon-envelope' aria-hidden="true">&nbsp&nbsp</span>Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Modal contact form -->
-    <div id="myModal" class="modal" style="display: none;">
-        <div class="modal-content" id="modalContent">
-            <span class="close" id="closeModal">&times;</span>
-            <div id="htmlContent"></div>
-        </div>
-    </div>
-    
     <!-- top container with text -->
-    <div class="flex-split">
-        <div class="flex-split__66">
-            <div class="flex-split__ctn-l">
-                <h1 class="fs150 fw7">you and your CAVAPOO PUPPY in a nutshell</h1>
-                <h2 class="fs1125 fw5 fc-d-brown lh150">The essential owners' guide to perfect puppy parenting - with easy-to-follow steps on how to choose and care for your new arrival</h2>
-                <h3 class="fs1125 fw5">Part of the Series: You and Your Puppy in a Nutshell</h3>
+    <div class="ctn ctn--narrow mt250">
+        <div class="row">
+            <div class="col-60 book-desc">
+                <h1>you and your CAVAPOO PUPPY in a nutshell</h1>
+                <h2>The essential owners' guide to perfect puppy parenting - with easy-to-follow steps on how to choose and care for your new arrival</h2>
+                <h3>Part of the Series: You and Your Puppy in a Nutshell</h3>
                 <p>The perfect handbook for Cavapoo puppy parents-to-be! A compact summary of the latest findings in puppy care and behaviour, this book walks you step by step through the process - from deciding whether a Cavapoo is right for you, to the first crucial days, weeks and months.</p>
                 <p>This book offers amusing dos and don'ts of puppy care that will keep you smiling through the poops, night-time whimpering and shredded personal items. And its easy-to-read, easy-to-follow advice will help you bring up a well-behaved dog, and get your special relationship off to a wonder-filled start.</p>
-                <h3 class="fs1125 fw5">About Cavapoo puppies</h3>
+                <h3>About Cavapoo puppies</h3>
                 <p>A Cavapoo puppy is a furry bundle of love, a living teddy bear – truly, madly, deeply devoted to its owners, and extremely agile, both physically and mentally.</p>
                 <p>Be ready for it to sweep you off your feet with its cuteness and cuddles, amaze you with its insight and understanding, and entertain you with its nimble acrobatics.</p>
                 <p>Be aware, however, that Cavapoos are prone to separation anxiety, so this is not a sensible choice if you’re likely to be leaving your dog for long stretches.</p>
             </div>
-        </div>
-        <div class="flex-split__33">
-            <div class="flex-split__ctn-r">
+            <div class="col-40">
                 <div class="buy-book">
                     <button id="openLookInside" class="btn btn__buy-book btn--long btn--d-brown b-rad-l mb100" breed="cavapoo">look inside</button>
                     <div class="buy-book__ctn">
@@ -104,11 +94,13 @@
                     <a class="btn btn__buy-book btn--long btn--d-brown b-rad-l mb100"  href="https://www.amazon.co.uk/Cavapoo-Puppy-Nutshell-easy-follow-ebook/dp/B0B9K6FRPX/" target="_blank" nofollow>Buy eBook</a>
                     <a class="btn btn__buy-book btn--long btn--d-brown b-rad-l mb100"  href="https://www.amazon.co.uk/Cavapoo-Puppy-Nutshell-easy-follow/dp/1838474862/" target="_blank" nofollow>Buy Paperback</a>
                 </div>
-                <div class="testimonial js-center">
-                    <blockquote>… The author’s passion for these lovely dogs shines through in abundance</blockquote>
-                </div>
-                <div class="testimonial js-center">
-                    <blockquote>easy to read and packed with essential information and useful tips</blockquote>
+                <div class="testimonials">
+                    <div class="testimonial">
+                        <blockquote>… The author’s passion for these lovely dogs shines through in abundance</blockquote>
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>easy to read and packed with essential information and useful tips</blockquote>
+                    </div>
                 </div>
             </div>
         </div>
@@ -146,24 +138,25 @@
     
     <!-- footer -->
     <footer>
-        <div class="flex-split jt-l">
-            <div class="flex-split__25">
-                <div class="flex-split__ctn-l">
-                    <div class="footer-logo">
-                        <a href="./"><img class="nutshell-logo" src="./assets/images/nutshell-logo-3.avif" alt="Nutshell Logo"/></a>
+        <div class="ctn">
+            <div class="row">
+                <div class="col-25">
+                    <div class="footer-contact">
+                        <div class="footer-contact__logo">
+                            <a href="./"><img class="nutshell-logo" src="./assets/images/nutshell-logo-3.avif" alt="Nutshell Logo"/></a>
+                        </div>
+                        <div class="footer-contact__address">
+                            <p><span class="icon-phone">&nbsp&nbsp&nbsp</span>+44 (0) 7908 768 413</p>
+                            <p><span class="icon-envelope">&nbsp&nbsp&nbsp</span><a href="mailto:info@nutshell-books.com">info@nutshell-books.com</a></p>
+                        </div>
                     </div>
-                    <address>
-                        <p><span class="icon-phone">&nbsp&nbsp&nbsp</span>+44 (0) 7908 768 413</p>
-                        <p><span class="icon-envelope">&nbsp&nbsp&nbsp</span><a href="mailto:info@nutshell-books.com">info@nutshell-books.com</a></p>
-                    </address>
                 </div>
-            </div>
-            <div class="flex-split__50">
-                <div class="flex-split__ctn-c">
-                    <p class="fs1125 fw5 fc-d-orange mt0">Books in the series:<br />You and Your Puppy in a Nutshell</p>
-                    <div class="book-lists">
-                        <div>
-                            <ul class="footer-list">
+                <div class="col-50">
+                    <div class="footer-books">
+                        <p class="footer-books__header">Other books in the series:<br />You and Your Puppy in a Nutshell</p>
+                        <div class="footer-books__lists">
+                            <div>
+                                <ul class="min-list">
                                 <li><a href="./your-puppy.html">All Puppies</a></li>
                                 <li><a href="./Beagle.html">Beagle</a></li>
                                 <li><a href="./cavalier-king.html">Cavalier King Charles</a></li>
@@ -174,7 +167,7 @@
                             </ul>
                         </div>
                         <div>
-                            <ul class="footer-list">
+                            <ul class="min-list">
                                 <li><a href="./german-shepherd.html">German Shepherd</a></li>
                                 <li><a href="./golden-retriever.html">Golden Retriever</a></li>
                                 <li><a href="./jack-russell.html">Jack Russell</a></li>
@@ -186,10 +179,9 @@
                     </div>
                 </div>
             </div>
-        
-            <div class="flex-split__25">
-                <div class="flex-split__ctn-r">
-                    <p class="fs1125 fw5 fc-d-orange mt0">Explore</p>
+            <div class="col-25">
+                <div class="footer-explore">
+                    <p class="footer-explore__header">Explore</p>
                     <ul class="footer-list">
                         <li><a href="./">Home</a></li>
                         <li><a href="./all-books.html">Books</a></li>
@@ -199,20 +191,26 @@
                 </div>
             </div>
         </div>
-
-        <div class="copyright-wrapper">
-            <div class="copyright-lft footer-ctn">
-                Copyright © <span id="year-span">xxxx</span> Nutshell Books - 12041821
+    </div>
+    <div class="ctn copyright">
+        <div class="row">
+            <div class="col-33">
+                <p class="copyright__left">
+                    Copyright © <span id="year-span">xxxx</span> Nutshell Books
+                </p>
             </div>
-            <div class="copyright-center footer-ctn">
-                Website Design, Build & Content Creation by <a href="./">GEEKS</a>
+            <div class="col-33">
+                <p class="copyright__center">Designed, Built & Content Created by <a href="./">Geckofy</a></p>
             </div>
-            <div class="copyright-rgt footer-ctn">
-                <a href="./privacy.html">Privacy Policy</a><span>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp</span>
-                <a href="./cookie.html">Cookie Policy</a><span>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp</span>
-                <a href="./sitemap.html">Sitemap</a>
+            <div class="col-33">
+                <div class="copyright__right">
+                    <a href="./privacy.html">Privacy Policy</a><span>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp</span>
+                    <a href="./cookie.html">Cookie Policy</a><span>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp</span>
+                    <a href="./sitemap.html">Sitemap</a>
+                </div>
             </div>
         </div>
+    </div>
 
     </footer>   
     
