@@ -26,8 +26,9 @@ async function fetchSitemap() {
     innerHTML = `<table id="sitemap" cellpadding="3">
     <thead>
     <th wide="75%">Sitemap</th>
-    <th wide="25%">Last Modified</th>
     </thead><tbody>`;
+
+    // <th wide="25%">Last Modified</th>
 
     // console.log(xmlNode)
     // console.log(innerHTML);
