@@ -1,5 +1,5 @@
 # Igrnore sitemap as this will come from provider
-sitemap.xml
+/sitemap.xml
 
 # Ignore all .map files
 *.map
