@@ -270,7 +270,7 @@ document.querySelectorAll('a').forEach(link => {
         } else {
           window.location.href = url;
         }
-      }, 500); // Adjust delay as needed
+      }, 250); // Adjust delay as needed
     }
   });
 });
