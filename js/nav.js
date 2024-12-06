@@ -254,3 +254,23 @@ applyLazyLoading();
 
 // Reapply on window resize
 window.addEventListener('resize', applyLazyLoading);
+
+// code to slow down the nofollow link to allow GTM to catch the event
+document.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', function(event) {
+    if (link.rel.includes('nofollow')) {
+      event.preventDefault();
+
+      const target = link.target;
+      const url = link.href;
+
+      setTimeout(() => {
+        if (target === "_blank") {
+          window.open(url, "_blank");
+        } else {
+          window.location.href = url;
+        }
+      }, 500); // Adjust delay as needed
+    }
+  });
+});
